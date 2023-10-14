@@ -2600,8 +2600,18 @@ footer .copyright span:last-child::after {
 /*# sourceMappingURL=main.css.map */
 
 /* NOVO-DODATO */ 
+.language {
+	float: right;
+	width: 65px;
+	height: 30px;
+	background-color: #000;
+}
 
-#ikonice {
-	width: 25px;
-	height: 25px;
+#serbia {
+	margin-right: 3px;
+	padding-left: 9px;
+}
+
+#siva {
+	color: gray;
 }
