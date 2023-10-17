@@ -2602,16 +2602,24 @@ footer .copyright span:last-child::after {
 /* NOVO-DODATO */ 
 .language {
 	float: right;
-	width: 65px;
-	height: 30px;
+	width: 45px;
+	height: 35px;
 	background-color: #000;
+	border: 2px solid #000;
+	transition: all 0.3s ease-in-out;
 }
 
-#serbia {
-	margin-right: 3px;
-	padding-left: 9px;
+.language:hover {
+	border: 2px solid #cc005f;
+}
+
+#country {
+	margin: 2px 6px;
+	width: 30px;
+	height: 25px;
 }
 
 #siva {
 	color: gray;
 }
+
