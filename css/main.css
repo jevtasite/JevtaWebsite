@@ -71,7 +71,7 @@ html, body {
 }
 body {
 	background: #151515;
-	font-family: "lora-regular", serif;
+	font-family: "monserrat", sans-serif;;
 	font-size: 1.7rem;
 	line-height: 3rem;
 	color: #6e6e6e;
@@ -153,7 +153,7 @@ p img {
 	margin: 0;
 }
 p.lead {
-	font-family: "lora-regular", serif;
+	font-family: "monserrat", sans-serif;;
 	font-size: 2rem;
 	line-height: 1.8;
 	color: #888888;
@@ -170,10 +170,12 @@ em, i, strong, b {
 	font-weight: normal;
 }
 em, i {
-	font-family: "lora-italic", serif;
+	font-family: "monserrat", sans-serif;
+	font-style: italic;
 }
 strong, b {
-	font-family: "lora-bold", serif;
+	font-family: "monserrat", sans-serif;
+	font-weight: 700;
 }
 small {
 	font-size: 1.2rem;
@@ -323,7 +325,7 @@ table {
 	border-width: 0;
 	width: 100%;
 	max-width: 100%;
-	font-family: "lora-regular", sans-serif;
+	font-family: "monserrat", sans-serif;;
 }
 th, td {
 	padding: 1.5rem 3rem;
@@ -1294,7 +1296,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #intro {
-	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
+/**	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom; */
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -1313,7 +1315,7 @@ header .logo a {
 	width: 100%;
 	height: 100%;
 	background: #111111;
-	opacity: .85;
+	opacity: .90;
 }
 
 .intro-content {
@@ -1347,7 +1349,7 @@ header .logo a {
 	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .intro-content .intro-position {
-	font-family: "lora-regular", serif;
+	font-family: "monserrat", sans-serif;
 	font-size: 1.7rem;
 	line-height: 2.4rem;
 	text-transform: uppercase;
@@ -2100,7 +2102,7 @@ header .logo a {
  */
 
 #services {
-	background: #313131 url(../images/bg.jpg) no-repeat center;
+/**	background: #313131 url(../images/bg.jpg) no-repeat center; */
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -2627,3 +2629,12 @@ footer .copyright span:last-child::after {
 	color: gray;
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -1; 
+}

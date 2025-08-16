@@ -31,6 +31,12 @@
 	<link rel="icon" type="image/icon" href="favicon.ico">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+	<!-- fonts
+	================================================== -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body id="top">
@@ -61,8 +67,8 @@
    		</div> <!-- /top-bar --> 
    		
 		<div class="language">
-			<a href="index.html" title="English"><img id="country" src="images/united-kingdom.svg"></a>
-			<!--<a href="langRS.html" title=""><img src="images/serbia.png"></a>-->
+			<a href="index.html" title="Srpski"><img id="country" src="images/united-kingdom.svg"></a>
+			<!--<a href="index.html" title=""><img src="images/united-kingdom.png"></a>-->
 		</div>
    	</div> <!-- /row --> 		
    </header> <!-- /header -->
@@ -71,6 +77,10 @@
    ================================================== -->
    <section id="intro">   
 
+	<video autoplay muted loop playsinline class="bg-video">
+                   <source src="video/waves.mp4" type="video/mp4">
+                </video>
+
    	<div class="intro-overlay"></div>	
 
    	<div class="intro-content">
@@ -78,11 +88,13 @@
 
    			<div class="col-twelve">
 
+				
+
 	   			<h5>Hello, World.</h5>
-	   			<h1>Ja sam <br> Luka Stoiljković.</h1>
+	   			<h1>Ja sam <br> Luka Stoiljković</h1>
 
 	   			<p class="intro-position">
-	   				<span>Front-end programer</span>
+	   				<span>Front-end Programer</span>
 	   			</p>
 
 	   			<a class="button stroke smoothscroll" href="#about" title="">Više o meni</a>
@@ -93,10 +105,10 @@
    	</div> <!-- /intro-content --> 
 
    	<ul class="intro-social">        
-		<li><a href="https://www.facebook.com/profile.php?id=61552420501147" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
-		<li><a href="https://www.linkedin.com/in/luka-stoiljkovi%C4%87-682781297/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
-		<li><a href="https://github.com/jevtasite" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a></li>
-		<li><a href="https://www.instagram.com/jevta.site/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+         <li><a href="https://www.facebook.com/profile.php?id=61552420501147" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+		 <li><a href="https://www.linkedin.com/in/luka-stoiljkovi%C4%87-682781297/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
+		 <li><a href="https://github.com/jevtasite" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a></li>
+         <li><a href="https://www.instagram.com/jevta.site/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
       </ul> <!-- /intro-social -->      	
 
    </section> <!-- /intro -->
@@ -110,13 +122,13 @@
    		<div class="col-twelve">
 
    			<h5>O meni</h5>
-   			<h1>Dozvolite mi da se predstavim.</h1>
+   			<h1>Da Vam se predstavim</h1>
 
    			<div class="intro-info">
 
    				<img src="images/profile-pic.png" alt="Profile Picture">
 
-   				<p class="lead">Zdravo, ja sam Luka, Front-End programer sa talentom za kreiranje vizuelno zadivljujućih i jednostavnih veb iskustava. Dobrodošli u moj kutak veba!</p>
+   				<p class="lead">Zdravo, ja sam Luka. Ja sam front-end programer koji voli da pretvara ideje u čiste, responzivne veb stranice. Uživam u pravljenju sajtova koji su jednostavni za korišćenje i lepo izgledaju. Uvek učim nove stvari i volim da otkrivam bolje načine za rešavanje problema na internetu.</p>
    			</div>   			
 
    		</div>   		
@@ -127,23 +139,23 @@
    		<div class="col-six tab-full">
 
    			<h3>Profil</h3>
-   			<p>Stalno usavršavam svoje veštine i prihvatam veb tehnologije koje se stalno razvijaju da bih napravio privlačne i funkcionalne korisničke interfejse.</p>
+   			<p>Front-end programer strastveno posvećen kreiranju veb stranica koje su jednostavne za korišćenje, zanimljive i izgledaju sjajno na bilo kom uređaju. Uživam u smišljanju kreativnih načina kako bi sajtovi bolje funkcionisali i bili što bolji korisnicima.</p>
 
    			<ul class="info-list">
    				<li>
-   					<strong>Moje ime:</strong>
+   					<strong>Ime i prezime:</strong>
    					<span>Luka Stoiljković</span>
    				</li>
    				<li>
    					<strong>Datum rođenja:</strong>
-   					<span>Treći jul, 2005.</span>
+   					<span>July 3rd, 2005</span>
    				</li>
    				<li>
    					<strong>Posao:</strong>
    					<span>Freelancer</span>
    				</li>
    				<li>
-   					<strong>Veb-sajt</strong>
+   					<strong>Website:</strong>
    					<span>jevta.site</span>
    				</li>
    				<li>
@@ -158,12 +170,11 @@
    		<div class="col-six tab-full">
 
    			<h3>Veštine</h3>
-   			<p><strong>HTML/CSS:</strong> Transformisanje dizajna u strukturirane, "responsive", veb-stranice.<br> <br>
+   			<p><strong>HTML/CSS:</strong> Transformacija dizajna u strukturirane, responzivne veb stranice.<br> <br>
+				<strong>Bootstrap:</strong> Korišćenje Bootstrap-a za lako kreiranje elegantnih veb-sajtova koji su prilagođeni mobilnim uređajima. <br> <br>
 				<strong>JavaScript:</strong> Dodavanje interaktivnosti i poboljšanje korisničkog iskustva. <br> <br>
-				<strong>Bootstrap:</strong> Iskorišćavanje moći Bootstrap-a za kreiranje elegantnih i mobilno funkcionalnih web dizajna s lakoćom. <br> <br>
-                <strong>jQuery:</strong> Unapređenje korisničkog interfejsa i olakšavanje kompleksnih zadataka. <br> <br>
-                <strong>AJAX, JSON:</strong> Izgradnja dinamičkih i besprekornih web aplikacija koje komuniciraju s serverom u pozadini, osiguravajući glatko korisničko iskustvo.
-			</p> 
+				<strong>jQuery:</strong> Poboljšanje korisničkih interfejsa i pojednostavljivanje složenih zadataka. <br> <br>
+				<strong>AJAX/JSON:</strong> Izrada dinamičnih veb aplikacija koje komuniciraju sa serverom u pozadini, obezbeđujući bolje korisničko iskustvo.</p>
 
 				<!-- <ul class="skill-bars"> -->
 				   <!-- <li>
@@ -197,7 +208,7 @@
    	<div class="row button-section">
    		<div class="col-twelve">
    			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Zaposlite me</a>
-   			<a href="https://drive.google.com/file/d/1-_J_s3Pu84PATcCnEygEjpN0MKCjsOUh/view?usp=sharing" target="_blank" title="Preuzmi CV" class="button button-primary">Preuzmi CV</a>
+   			<a href="https://drive.google.com/file/d/1Z66kM1UfiwYEwjTgSoE44BLFR-PIIItg/view?usp=sharing" target="_blank" title="Download CV" class="button button-primary">Preuzmi CV</a>
    		</div>   		
    	</div>
 
@@ -212,9 +223,9 @@
    		<div class="col-twelve">
 
    			<h5>Rezime</h5>
-   			<h1>Još mojih akreditiva.</h1>
+   			<h1>Više mojih akreditiva</h1>
 
-   			<p class="lead">Kao posvećeni Front-End programer, stalno širim svoj skup veština i znanja da bih pružio izuzetna veb-rešenja.</p>
+   			<p class="lead">Evo kratkog pregleda mog iskustva, veština i projekata do sada.</p>
 
    		</div>   		
    	</div> <!-- /section-intro--> 
@@ -224,7 +235,7 @@
    		<div class="col-twelve resume-header">
 
    			<h2>Radno iskustvo</h2><br>
-
+			<!-- <h3>Currently looking for a job!</h3> -->
 
 
    		</div> 
@@ -235,23 +246,23 @@
 
    				<div class="timeline-block">
 
-					<div class="timeline-ico">
-						<i class="fa fa-graduation-cap"></i>
-					</div>
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
 
-					<div class="timeline-header">
-						<h3>Praksa</h3>
-						<p>Maj 2023. - Jun 2023.</p>
-					</div>
+	   				<div class="timeline-header">
+	   					<h3>Praksa</h3>
+	   					<p>Maj 2023 - Jun 2023</p>
+	   				</div>
 
-					<div class="timeline-content">
-						<h4>Esenca Software</h4>
-						<p id="presume">Učenje i rad na tehnologijama (Bootstrap, AJAX, JSON, jQuery), rešavanje konkretnih taskova za klijenta (rad sa API), rešavanje front-end taskova za klijenta (Bootstrap taskovi).</p>
-					    <h3 style="font-size: 1.75rem;"><a href="https://drive.google.com/file/d/1RocFTef7IS-BZRohnQbvb3gdcyd_cYWx/view?usp=sharing" title="Certificate" target="_blank">Sertifikat</a></h3>
-					</div>
-
+	   				<div class="timeline-content">
+	   					<h4>Esenca Software</h4>
+	   					<p id="presume">Učenje i rad na tehnologijama (Bootstrap, AJAX, JSON, jQuery), rešavanje konkretnih taskova za klijenta (rad sa API), rešavanje front-end taskova za klijenta (Bootstrap taskovi).</p>
+						   <h3 style="font-size: 1.75rem;"><a href="https://drive.google.com/file/d/1RocFTef7IS-BZRohnQbvb3gdcyd_cYWx/view?usp=sharing" title="Certificate" target="_blank">Sertifikat</a></h3>
+	   				</div>
 
 	   			</div> 
+				
 
 	   			<!--<div class="timeline-block">
 
@@ -293,6 +304,8 @@
 
    		</div> 
    		
+		
+
    	</div>
    	
    	<div class="row resume-timeline">
@@ -378,9 +391,9 @@
    		<div class="col-twelve">
 
    			<h5>Portfolio</h5>
-   			<h1>Pogledajte neke od mojih radova.</h1>
+   			<h1>Pogledajte neke od mojih radova</h1>
 
-   			<p class="lead">Istražite izbor mojih projekata da biste stekli uvid u kreativnu i tehničku stručnost koju donosim na sto.</p>
+   			<!-- <p class="lead">Explore a selection of my projects to get a glimpse of the creative and technical expertise I bring to the table.</p> -->
 
    		</div>   		
    	</div> <!-- /section-intro--> 
@@ -392,53 +405,53 @@
    			<!-- portfolio-wrapper -->
 	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
 
-				<div class="bgrid folio-item">
-					<div class="item-wrap">
-						<img src="images/portfolio/Jevta-Povrce.PNG" alt="Liberty">
-					   <a href="#modal-01" class="overlay">	                  	           
-						  <div class="folio-item-table">
-							  <div class="folio-item-cell">
-										 <h3 class="folio-title">Jevta-Vegetables</h3>	     					    
-										   <span class="folio-types">
-											   Moj prvi veb-sajt 
-										 </span>
-									 </div>	                      	
-						  </div>                    
-					   </a>
-					</div>	               
-					 </div> <!-- /folio-item --> 
+	         	<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/Jevta-Povrce.PNG" alt="Vegetables">
+	                  <a href="#modal-01" class="overlay">	                  	           
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">Jevta Povrće</h3>	     					    
+		     					    	 <span class="folio-types">
+		     					       	  Moj prvi veb-sajt 
+		     					       </span>
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>	               
+	        		</div> <!-- /folio-item -->
 
-					 <div class="bgrid folio-item">
+	        		<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/Jevta-Esenca.png" alt="Esenca Software">
+	               	<a href="#modal-02" class="overlay">              		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Esenca Software</h3>	     					    
+		     					    	<span class="folio-types">
+		     					       	  Veb-programiranje
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            	<div class="bgrid folio-item">
 						<div class="item-wrap">
-							<img src="images/portfolio/Jevta-Esenca.png" alt="Esenca Software">
-							<a href="#modal-02" class="overlay">              		                  
+							<img src="images/portfolio/Jevta-CEC.png" alt="Calculator">
+							<a href="#modal-06" class="overlay">              		                  
 							  <div class="folio-item-table">
 								  <div class="folio-item-cell">
-									  <h3 class="folio-title">Esenca Software</h3>	     					    
+									  <h3 class="folio-title">Kursna lista</h3>	     					    
 											  <span class="folio-types">
-												   Veb-Programiranje
+												   Konventor valuta
 											</span>		     		
 										 </div> 	                      	
 							  </div>                    
 						   </a>
 						</div>
 						 </div> <!-- /folio-item -->
-
-							 <div class="bgrid folio-item">
-								<div class="item-wrap">
-									<img src="images/portfolio/Jevta-CEC.png" alt="Calculator">
-									<a href="#modal-06" class="overlay">              		                  
-									  <div class="folio-item-table">
-										  <div class="folio-item-cell">
-											  <h3 class="folio-title">Konventor Valuta</h3>	     					    
-													  <span class="folio-types">
-														   Veb-Programiranje
-													</span>		     		
-												 </div> 	                      	
-									  </div>                    
-								   </a>
-								</div>
-								 </div>
 
 	            <!-- <div class="bgrid folio-item">
 	               <div class="item-wrap">
@@ -472,81 +485,81 @@
 	               </div>
 	        		</div> /folio-item -->
 
-					<div class="bgrid folio-item">
-						<div class="item-wrap">
-							<img src="images/portfolio/Jevta-PearShop.png"alt="Clouds">
-						   <a href="#modal-03" class="overlay">             		                  
-							  <div class="folio-item-table">
-								  <div class="folio-item-cell">
-									  <h3 class="folio-title">PearShop</h3>	     					    
-											  <span class="folio-types">
-												   Veb-Programiranje
-											</span>		     		
-										 </div> 	                      	
-							  </div>                    
-						   </a>
-						</div>
-						 </div> <!-- /folio-item -->
+						 <div class="bgrid folio-item">
+							<div class="item-wrap">
+								<img src="images/portfolio/Jevta-PearShop.png" alt="Shop">
+							   <a href="#modal-03" class="overlay">             		                  
+								  <div class="folio-item-table">
+									  <div class="folio-item-cell">
+										  <h3 class="folio-title">PearShop</h3>	     					    
+												  <span class="folio-types">
+													   Veb-programiranje
+												</span>		     		
+											 </div> 	                      	
+								  </div>                    
+							   </a>
+							</div>
+							 </div> <!-- /folio-item -->   
 
 	            <!-- modal popups - begin
 	            ============================================================= -->
 	            <div id="modal-01" class="popup-modal slider mfp-hide">	
 
-					<div class="media">
-						<img src="images/portfolio/modals/m-jevta-povrce.jpg" alt="" />
-					</div>      	
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-jevta-povrce.jpg" alt="" />
+				     	</div>      	
 
-				  <div class="description-box">
-					 <h4>Moj Prvi Veb-sajt</h4>		      
-					 <p>Prvi statični veb-sajt koji sam napravio</p>
+					   <div class="description-box">
+					      <h4>Moj prvi veb-sajt</h4>		      
+					      <p>Prvi statični veb-sajt koji sam napravio</p>
 
-					 <div class="categories">Veb-Programiranje</div>			               
-				  </div>
+					      <div class="categories">Veb-programiranje</div>			               
+					   </div>
 
-				<div class="link-box">
-				   <a href="https://jevtasite.github.io/JevtaVegetable/index.html" target="_blank">Poseti</a>
-					 <a href="#" class="popup-modal-dismiss">Zatvori</a>
-				</div>		      
+			         <div class="link-box">
+			            <a href="https://jevtasite.github.io/JevtaVegetable/index.html" target="_blank">Poseti</a>
+					      <a href="#" class="popup-modal-dismiss">Zatvori</a>
+			         </div>		      
 
 				   </div> <!-- /modal-01 -->
 
 				   <div id="modal-02" class="popup-modal slider mfp-hide">	
 
-					<div class="media">
-						<img src="images/portfolio/modals/m-esenca.png" alt="Esenca" />
-					</div>      	
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-esenca.png" alt="Esenca" />
+				     	</div>      	
 
-				  <div class="description-box">
-					 <h4>Esenca Software</h4>		      
-					 <p>Veb-sajt koji sam uradio za IT kompaniju.</p>
+					   <div class="description-box">
+					      <h4>Esenca Software</h4>		      
+					      <p>Veb-sajt koji sam uradio za IT kompaniju.</p>
 
-					 <div class="categories">Veb-Programiranje</div>			               
-				  </div>
+					      <div class="categories">Veb-programiranje</div>			               
+					   </div>
 
-				<div class="link-box">
-				   <a href="https://jevtasite.github.io/Jevta-Esenca/">Poseti</a>
-					 <a href="#" class="popup-modal-dismiss">Zatvori</a>
-				</div>		       
+			         <div class="link-box">
+			            <a href="https://jevtasite.github.io/Jevta-Esenca/">Poseti</a>
+					      <a href="#" class="popup-modal-dismiss">Zatvori</a>
+			         </div>		      
 
 				   </div> <!-- /modal-02 -->
 
 				   <div id="modal-03" class="popup-modal slider mfp-hide">	
 
-					<div class="media">
-						<img src="images/portfolio/modals/m-pearshop.png" alt="" />
-					</div>      	
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-pearshop.png" alt="" />
+				     	</div>      	
 
-				  <div class="description-box">
-					 <h4>PearShop</h4>		      
-					 <p>Integrisanje već gotovih elemenata na mom veb-sajtu.</p>
+					   <div class="description-box">
+					      <h4>PearShop</h4>		      
+					      <p>Integrisanje gotovih elemenata na moj veb-sajt.</p>
 
-					 <div class="categories">Veb-Programiranje</div>			               
-				  </div>
+					      <div class="categories">Veb-programiranje</div>			               
+					   </div>
 
-				<div class="link-box">
-				   <a href="https://jevtasite.github.io/Jevta-PearShop/">Poseti</a>
-					 <a href="#" class="popup-modal-dismiss">Zatvori</a>
-				</div>	
+			         <div class="link-box">
+			            <a href="https://jevtasite.github.io/Jevta-PearShop/">Poseti</a>
+					      <a href="#" class="popup-modal-dismiss">Zatvori</a>
+			         </div>		      
 
 				   </div> <!-- /modal-03 -->
 
@@ -564,8 +577,8 @@
 					   </div>
 
 			         <div class="link-box">
-			            <a href="http://www.behance.net">Detaljnije</a>
-					      <a href="#" class="popup-modal-dismiss">Zatvori</a>
+			            <a href="http://www.behance.net">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
 			         </div>		      
 
 				   </div> /modal-04 -->
@@ -584,8 +597,8 @@
 					   </div>
 
 			         <div class="link-box">
-			            <a href="http://www.behance.net">Detaljnije</a>
-					      <a href="#" class="popup-modal-dismiss">Zatvori</a>
+			            <a href="http://www.behance.net">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
 			         </div>		      
 
 				   </div> /modal-05 -->
@@ -597,16 +610,16 @@
 					</div>      	
 
 				  <div class="description-box">
-					 <h4>Konventor Valuta</h4>		      
-					 <p>Moj prvi susret s API-jem - jednostavan kalkulator za razmenu valuta koji vam donosi svetske valute na dohvat ruke.</p>
+					 <h4>Konventor valuta</h4>		      
+					 <p>Moje prvo iskustvo sa API-evima, jednostavan konventor valuta.</p>
 
-					 <div class="categories">VEB-PROGRAMIRANJE</div>			               
+					 <div class="categories">Veb-programiranje</div>			               
 				  </div>
 
 				<div class="link-box">
 				   <a href="https://jevtasite.github.io/JevtaCEC/index.html">Poseti</a>
 					 <a href="#" class="popup-modal-dismiss">Zatvori</a>
-				</div>		  	     
+				</div>		  		      
 
 				   </div> <!-- /modal-06 -->
 
@@ -660,7 +673,7 @@
    		<div class="col-twelve">
 
    			<h5>Usluge</h5>
-   			<h1>Šta mogu da uradim za Vas?</h1>
+   			<h1>Kako mogu da pomognem</h1>
 
    			<!--<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>-->
 
@@ -692,10 +705,9 @@
 
 	            <div class="service-content">	
 
-	            	<h3>Veb-Programiranje</h3>  
+	            	<h3>Veb-programiranje</h3>  
 
-		            <p class="desc">Veb-razvoj nije samo moj posao; to je moja strast. Ponosan sam što stvaram zadivljujuće i funkcionalne veb stranice koje ostavljaju trajan uticaj.
-						Specijalizovao sam se za pravljenje vizuelno privlačnih i korisničkih front-end iskustava.
+		            <p class="desc">Veb-programiranje nije samo moj posao, to je moja strast. Ponosim se kreiranjem zanimljivih i funkcionalnih veb-sajtova koji ostavljaju dobar utisak na korisnike.
 	         		</p>
 
 	            </div>	                          
@@ -710,7 +722,7 @@
 
 	            	<h3>Brendiranje</h3>
 
-		            <p class="desc">Radiću sa vama na definisanju jasne strategije brenda koja je u skladu sa vašim poslovnim ciljevima. Mi ćemo uspostaviti vašu jedinstvenu prodajnu ponudu, ciljnu publiku i poruku koju želite da prenesete kako biste stvorili brend koji se ističe.
+		            <p class="desc">Sarađivaću sa vama kako bismo definisali jasnu strategiju brenda koja je usklađena sa vašim poslovnim ciljevima. Utvrdićemo vašu jedinstvenu prodajnu ponudu, ciljnu publiku i poruku koju želite da prenesete kako bismo stvorili brend koji se ističe.
 	        			</p> 
 
 	            </div> 	            	               
@@ -753,9 +765,9 @@
 
 	            <div class="service-content">
 
-	            	 <h3>Konsultacija</h3>
+	            	 <h3>Konsultacije</h3>
 
-		            <p class="desc">Blisko ću sarađivati sa vama na definisanju sveobuhvatne digitalne strategije koja je u skladu sa vašim poslovnim ciljevima. Ovo uključuje postavljanje jasnih ciljeva, identifikaciju ciljne publike i pravljenje mape puta za vaše digitalno putovanje.
+		            <p class="desc">Sarađivaću sa Vama kako bismo definisali sveobuhvatnu digitalnu strategiju koja je usklađena sa vašim poslovnim ciljevima. To uključuje postavljanje jasnih ciljeva, pronalaženje ciljnih publika i kreiranje plana za vaše digitalno putovanje.
 	        			</p> 
 	        			
 	            </div>	               
@@ -785,11 +797,11 @@
 						</div>
 
 						<h3 class="stat-count">
-							1
+							2
 						</h3>
 
 						<h5 class="stat-title">
-							Godina iskustva
+							Godine iskustva
 						</h5>
 
 					</div> <!-- /stat -->					
@@ -890,9 +902,9 @@
    		<div class="col-twelve">
 
    			<h5>Kontakt</h5>
-   			<h1>Voleo bih da razgovaram sa Vama.</h1>
+   			<h1>Voleo bih da razgovaram sa Vama</h1>
 
-   			<p class="lead">Uvek sam željan da sarađujem na uzbudljivim projektima i da se povežem sa kolegama u tehnološkoj zajednici. Ako imate projekat na umu, ili ako želite samo da razgovarate o najnovijim stvarima u razvoju veba, ne ustručavajte se da me kontaktirate.</p>
+   			<p class="lead">Uvek sam spreman za rad na zanimljivim projektima i povezivanje sa drugim ljudima koji su u istoj sferi kao ja. Imate ideju za projekat ili samo želite da popričate o programiranju? Slobodno me kontaktirajte.</p>
 
    		</div> 
    	</div> <!-- /section-intro -->
@@ -902,25 +914,25 @@
    		<div class="col-twelve">
 
             <!-- form -->
-           <!-- <form name="contactForm" id="contactForm" method="post" action="">
+           <!--<form name="contactForm" id="contactForm" method="post" action="">
       			<fieldset>
 
                   <div class="form-field">
- 						   <input name="contactName" type="text" id="contactName" placeholder="Ime" value="" minlength="2" required="">
+ 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
                   </div>
                   <div class="form-field">
 	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
 	               </div>
                   <div class="form-field">
-	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Tema" value="">
+	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
 	               </div>                       
                   <div class="form-field">
 	                 	<textarea name="contactMessage" id="contactMessage" placeholder="Message" rows="10" cols="50" required=""></textarea>
 	               </div>                      
                  <div class="form-field">
-                     <button class="submitform">Pošalji</button>
+                     <button class="submitform">Submit</button>
                      <div id="submit-loader">
-                        <div class="text-loader">Šalje se...</div>                             
+                        <div class="text-loader">Sending...</div>                             
        				      <div class="s-loader">
 								  	<div class="bounce1"></div>
 								  	<div class="bounce2"></div>
@@ -930,14 +942,14 @@
                   </div>
 
       			</fieldset>
-      		</form> --><!-- Form End -->
+      		</form>--> <!-- Form End -->
 
             <!-- contact-warning -->
             <div id="message-warning">            	
             </div>            
             <!-- contact-success -->
       		<div id="message-success">
-               <i class="fa fa-check"></i>Vaša poruka je poslata, hvala Vam!<br>
+               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
       		</div>
 
          </div> <!-- /col-twelve -->
@@ -966,21 +978,21 @@
    				<i class="icon-mail"></i>
    			</div>
 
-   			<h5>Moj Email</h5>
+   			<h5>Pošaljite mejl na</h5>
 
    			<a id="siva" href="#" onclick="openGmail()" target="_blank">jevta.site@gmail.com</a></li>
 
    		</div>
 
-   		<div class="col-six tab-full">
+   		<div id="razmak" class="col-six tab-full">
 
    			<div class="icon">
    				<i class="icon-phone"></i>
    			</div>
 
-   			<h5>Broj telefona</h5>
+   			<h5>Pozovite me na</h5>
 
-   			<p> (+381) 64 494 3411 </p>
+   			<p>(+381) 64 494 3411</p>
 
    		</div>
    		
@@ -998,17 +1010,17 @@
      		<div class="col-four tab-full pull-right social">
 
      			<ul class="footer-social">        
-					<li><a href="https://www.facebook.com/profile.php?id=61552420501147" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/luka-stoiljkovi%C4%87-682781297/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
-					<li><a href="https://github.com/jevtasite" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a></li>
-					<li><a href="https://www.instagram.com/jevta.site/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+			      <li><a href="https://www.facebook.com/profile.php?id=61552420501147" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+				  <li><a href="https://www.linkedin.com/in/luka-stoiljkovi%C4%87-682781297/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
+				  <li><a href="https://github.com/jevtasite" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a></li>
+			      <li><a href="https://www.instagram.com/jevta.site/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
 			   </ul> 
 	      		
 	      </div>
 
       	<div class="col-eight tab-full">
 	      	<div class="copyright">
-		        	<span>Jevta© Copyright 2024</span>        	
+		        	<span>Jevta© Copyright 2025</span>        	
 		         </div>		                  
 	      	</div>
 
