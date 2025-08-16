@@ -18,7 +18,7 @@
     	$("#loader").fadeOut("slow", function(){
 
         // will fade out the whole DIV that covers the website.
-        $("#preloader").delay(300).fadeOut("slow");
+        $("#preloader").delay(200).fadeOut("slow");
 
       });       
 
@@ -287,6 +287,98 @@
 		}		
 
 	});		
+
+	/* Typing text ENG
+  	------------------------------------------------------ */
+
+	document.addEventListener("DOMContentLoaded", () => {
+  const phrases = ["Hello, World.", "Welcome to my website!"];
+  const typingEl = document.getElementById("typing-text");
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  const typingSpeed = 130;    // typing speed
+  const deletingSpeed = 50;   // deleting speed
+  const delayBetween = 1700;  // pause after a full phrase
+
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+
+    // ensure solid cursor while typing
+    typingEl.classList.remove("blinking");
+
+    if (isDeleting) {
+      typingEl.textContent = currentPhrase.substring(0, charIndex - 1) || "\u00A0"; 
+      charIndex--;
+    } else {
+      typingEl.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    let timeout = isDeleting ? deletingSpeed : typingSpeed;
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      timeout = delayBetween;
+      isDeleting = true;
+      typingEl.classList.add("blinking"); // blink when pausing
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      timeout = typingSpeed;
+    }
+
+    setTimeout(type, timeout);
+  }
+
+  type();
+});
+
+/* Typing text SRB
+  	------------------------------------------------------ */
+
+	document.addEventListener("DOMContentLoaded", () => {
+  const phrases = ["Hello, World.", "Dobro došli na moj sajt!"];
+  const typingEl = document.getElementById("typing-textSRB");
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  const typingSpeed = 130;    // typing speed
+  const deletingSpeed = 50;   // deleting speed
+  const delayBetween = 1700;  // pause after a full phrase
+
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+
+    // ensure solid cursor while typing
+    typingEl.classList.remove("blinking");
+
+    if (isDeleting) {
+      typingEl.textContent = currentPhrase.substring(0, charIndex - 1) || "\u00A0"; 
+      charIndex--;
+    } else {
+      typingEl.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    let timeout = isDeleting ? deletingSpeed : typingSpeed;
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      timeout = delayBetween;
+      isDeleting = true;
+      typingEl.classList.add("blinking"); // blink when pausing
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      timeout = typingSpeed;
+    }
+
+    setTimeout(type, timeout);
+  }
+
+  type();
+});
 
 })(jQuery);
 
