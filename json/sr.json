@@ -1,0 +1,78 @@
+{
+  "menuHome": "Početna",
+  "menuAbout": "O meni",
+  "menuResume": "Biografija",
+  "menuPortfolio": "Portfolio",
+  "menuServices": "Usluge",
+  "menuContact": "Kontakt",
+
+  "introName": "Ja sam\nLuka Stoiljković",
+  "introRole": "Front-end programer",
+  "introButton": "Više o meni",
+
+  "aboutHeading": "Da Vam se predstavim",
+  "aboutText1": "Ćao, ja sam Luka. Front-end programer koji voli da pretvara ideje u čiste, responzivne veb sajtove. Uživam da pravim sajtove koji se lako koriste i dobro izgledaju. Uvek učim nove stvari i volim da pronalazim bolja rešenja za web probleme.",
+
+  "profileHeading": "Profil",
+  "profileText": "Front-end programer sa strašću za izgradnju sajtova koji su laki za korišćenje, zanimljivi i dobro prikazani na bilo kom uređaju. Volim da nalazim kreativne načine za bolje i prijatnije korisničko iskustvo.",
+  "fullname": "Ime i prezime",
+  "birthDate": "Datum rođenja",
+  "birthDay": "3. jul 2005.",
+  "job": "Zanimanje",
+  "jobDesc": "Frilenser",
+  "website": "Veb sajt",
+  "email": "Email",
+
+  "skills": "Veštine",
+  "skillsText1": "Transformacija dizajna u strukturirane, responzivne veb stranice.",
+  "skillsText2": "Korišćenje Bootstrap-a za lako kreiranje elegantnih veb-sajtova koji su prilagođeni mobilnim uređajima.",
+  "skillsText3": "Dodavanje interaktivnosti i poboljšanje korisničkog iskustva.",
+  "skillsText4": "Poboljšanje korisničkih interfejsa i pojednostavljivanje složenih zadataka.",
+  "skillsText5": "Izrada dinamičnih veb aplikacija koje komuniciraju sa serverom u pozadini, obezbeđujući bolje korisničko iskustvo.",
+  "skillsButton1": "Zaposlite me",
+  "skillsButton2": "Preuzmi CV",
+
+  "resumeHeading": "Biografija",
+  "resumeCredentials": "Više mojih akreditiva",
+  "resumeWork": "Radno iskustvo",
+  "internship": "Praksa",
+  "internshipText1": "Učenje i rad na tehnologijama (Bootstrap, AJAX, JSON, jQuery), rešavanje konkretnih taskova za klijenta (rad sa API), rešavanje front-end taskova za klijenta (Bootstrap taskovi).",
+  "internshipDate": "Maj 2023. - Jun 2023.",
+  "certificate": "Sertifikat",
+
+  "portfolioHeading": "Portfolio",
+  "portfolioText": "Neki od mojih nedavnih radova",
+
+  "projectText1": "Moj prvi veb sajt",
+  "projectText2": "Veb programiranje",
+  "projectText3": "Konventor valuta",
+  "projectText4": "Veb programiranje",
+
+  "projectPopup1": "Prvi statični sajt koji sam napravio.",
+  "projectPopup2": "Sajt koji sam uradio za IT kompaniju",
+  "projectPopup3": "Integrisanje gotovih elemenata na moj veb sajt.",
+  "projectPopup4": "Moje prvo iskustvo sa API-evima, jednostavan konventor valuta.",
+
+  "projectButton1": "Poseti",
+  "projectButton2": "Zatvori",
+
+  "services": "Usluge",
+  "servicesHeading": "Kako mogu da pomognem",
+  "webDevelopment": "Veb razvoj",
+  "webDevelopmentDesc": "Izrada brzih, modernih i responzivnih sajtova sa čistim kodom.",
+  "branding": "Brendiranje",
+  "brandingDesc": "Kreiranje jedinstvenog digitalnog identiteta i prisustva za vaš biznis.",
+  "consultancy": "Konsultacije",
+  "consultancyDesc": "Pomoć u izboru najboljih rešenja za vaš sajt ili projekat.",
+
+  "counter1": "Godine iskustva",
+  "counter2": "Klijenata",
+  "counter3": "Projekata",
+  "counter4": "Sati programiranja",
+
+  "contact": "Kontakt",
+  "contactHeading": "Voleo bih da razgovaram sa Vama",
+  "contactText": "Uvek sam spreman za rad na zanimljivim projektima i povezivanje sa drugim ljudima koji su u istoj sferi kao ja. Imate ideju za projekat ili samo želite da popričate o programiranju? Slobodno me kontaktirajte.",
+  "contactEmail": "Pošaljite mejl na",
+  "contactPhone": "Pozovite me na"
+}

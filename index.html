@@ -56,21 +56,28 @@
 
 		   	<nav id="main-nav-wrap">
 					<ul class="main-navigation">
-						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
-						<li><a class="smoothscroll"  href="#about" title="">About</a></li>
-						<li><a class="smoothscroll"  href="#resume" title="">Resume</a></li>
-						<li><a class="smoothscroll"  href="#portfolio" title="">Portfolio</a></li>
-						<li><a class="smoothscroll"  href="#services" title="">Services</a></li>					
-						<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>	
+						<li class="current"><a class="smoothscroll"  href="#intro" data-translate="menuHome"></a></li>
+						<li><a class="smoothscroll"  href="#about" data-translate="menuAbout"></a></li>
+						<li><a class="smoothscroll"  href="#resume" data-translate="menuResume"></a></li>
+						<li><a class="smoothscroll"  href="#portfolio" data-translate="menuPortfolio"></a></li>
+						<li><a class="smoothscroll"  href="#services" data-translate="menuServices"></a></li>					
+						<li><a class="smoothscroll"  href="#contact" data-translate="menuContact"></a></li>	
 						<!--<li><a href="styles.html" title="">Style Demo</a></li>-->				
 					</ul>
 				</nav>    		
    		</div> <!-- /top-bar --> 
    		
-		<div class="language">
-			<a href="langRS.html" title="Srpski"><img id="country" src="images/srbija.svg"></a>
-			<!--<a href="index.html" title=""><img src="images/united-kingdom.png"></a>-->
-		</div>
+
+			<div class="language">
+  <a href="#" onclick="setLanguage('sr'); return false;" title="Srpski">
+    <img src="images/srbija.svg" alt="Srpski" class="lang-flag" data-lang="sr">
+  </a>
+  <a href="#" onclick="setLanguage('en'); return false;" title="English">
+    <img src="images/united-kingdom.svg" alt="English" class="lang-flag" data-lang="en">
+  </a>
+           </div>
+
+
    	</div> <!-- /row --> 		
    </header> <!-- /header -->
 
@@ -92,13 +99,13 @@
 				
 
 	   			<h5 id="typing-text">Hello, World.</h5>
-	   			<h1>I'm Luka Stoiljković</h1>
+	   			<h1 data-translate="introName">I'm Luka Stoiljković</h1>
 
 	   			<p class="intro-position">
-	   				<span>Front-end Developer</span>
+	   				<span data-translate="introRole">Front-end Developer</span>
 	   			</p>
 
-	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+	   			<a class="button stroke smoothscroll" href="#about" title="" data-translate="introButton"></a>
 
 	   		</div>  
    			
@@ -124,14 +131,14 @@
    	<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>About</h5>
-   			<h1>Let me introduce myself</h1>
+   			<h5 data-translate="menuAbout"></h5>
+   			<h1 data-translate="aboutHeading"></h1>
 
    			<div class="intro-info">
 
    				<img src="images/profile-pic.png" alt="Profile Picture">
 
-   				<p class="lead">Hey, I’m Luka. I’m a front-end web developer who loves turning ideas into clean, responsive websites. I enjoy making sites that are easy to use and look good. I’m always learning new things and like figuring out better ways to solve problems on the web.</p>
+   				<p class="lead" data-translate="aboutText1">Hey, I’m Luka. I’m a front-end web developer who loves turning ideas into clean, responsive websites. I enjoy making sites that are easy to use and look good. I’m always learning new things and like figuring out better ways to solve problems on the web.</p>
    			</div>   			
 
    		</div>   		
@@ -141,28 +148,28 @@
 
    		<div class="col-six tab-full">
 
-   			<h3>Profile</h3>
-   			<p>Front-end developer passionate about building websites that are easy to use, engaging, and look great on any device. I enjoy coming up with creative ways to make sites work better and feel more enjoyable for users.</p>
+   			<h3 data-translate="profileHeading"></h3>
+   			<p data-translate="profileText">Front-end developer passionate about building websites that are easy to use, engaging, and look great on any device. I enjoy coming up with creative ways to make sites work better and feel more enjoyable for users.</p>
 
    			<ul class="info-list">
    				<li>
-   					<strong>Fullname:</strong>
+   					<strong data-translate="fullname"></strong>
    					<span>Luka Stoiljković</span>
    				</li>
    				<li>
-   					<strong>Birth Date:</strong>
-   					<span>July 3rd, 2005</span>
+   					<strong data-translate="birthDate"></strong>
+   					<span data-translate="birthDay"></span>
    				</li>
    				<li>
-   					<strong>Job:</strong>
-   					<span>Freelancer</span>
+   					<strong data-translate="job"></strong>
+   					<span data-translate="jobDesc"></span>
    				</li>
    				<li>
-   					<strong>Website:</strong>
+   					<strong data-translate="website"></strong>
    					<span>jevta.site</span>
    				</li>
    				<li>
-   					<strong>Email:</strong>
+   					<strong data-translate="email"></strong>
    					<span>jevta.site@gmail.com</span>
    				</li>
 
@@ -172,12 +179,12 @@
 
    		<div class="col-six tab-full">
 
-   			<h3>Skills</h3>
-   			<p><strong>HTML/CSS:</strong> Transforming design into structured, responsive web pages.<br> <br>
-				<strong>Bootstrap:</strong> Leveraging the power of Bootstrap to create sleek and mobile-friendly web layouts with ease. <br> <br>
-				<strong>JavaScript:</strong> Adding interactivity and enhancing user experiences. <br> <br>
-				<strong>jQuery:</strong> Enhancing user interfaces and simplifying complex tasks. <br> <br>
-				<strong>AJAX/JSON:</strong> Building dynamic and seamless web applications that communicate with the server in the background, ensuring a smoother user experience.</p>
+   			<h3 data-translate="skills">Skills</h3>
+   			<p><strong>HTML/CSS: </strong><span data-translate="skillsText1"></span><br> <br>
+				<strong>Bootstrap: </strong><span data-translate="skillsText2"></span><br> <br>
+				<strong>JavaScript: </strong><span data-translate="skillsText3"></span><br> <br>
+				<strong>jQuery: </strong><span data-translate="skillsText4"></span><br> <br>
+				<strong>AJAX/JSON: </strong><span data-translate="skillsText5"></span></p>
 
 				<!-- <ul class="skill-bars"> -->
 				   <!-- <li>
@@ -210,8 +217,8 @@
 
    	<div class="row button-section">
    		<div class="col-twelve">
-   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
-   			<a href="https://drive.google.com/file/d/1Z66kM1UfiwYEwjTgSoE44BLFR-PIIItg/view?usp=sharing" target="_blank" title="Download CV" class="button button-primary">Download CV</a>
+   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll" data-translate="skillsButton1"></a>
+   			<a href="https://drive.google.com/file/d/1Z66kM1UfiwYEwjTgSoE44BLFR-PIIItg/view?usp=sharing" target="_blank" title="Download CV" class="button button-primary" data-translate="skillsButton2"></a>
    		</div>   		
    	</div>
 
@@ -229,10 +236,10 @@
 		<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>Resume</h5>
-   			<h1>More of my credentials</h1>
+   			<h5 data-translate="resumeHeading"></h5>
+   			<h1 data-translate="resumeCredentials"></h1>
 
-   			<p class="lead">Here’s a quick look at my experience, skills, and projects so far.</p>
+   			<!-- <p class="lead">Here’s a quick look at my experience, skills, and projects so far.</p> -->
 
    		</div>   		
    	</div> <!-- /section-intro--> 
@@ -241,7 +248,7 @@
 
    		<div class="col-twelve resume-header">
 
-   			<h2>Work Experience</h2><br>
+   			<h2 data-translate="resumeWork"></h2><br>
 			<!-- <h3>Currently looking for a job!</h3> -->
 
 
@@ -258,14 +265,14 @@
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>Internship</h3>
-	   					<p>May 2023 - June 2023</p>
+	   					<h3 data-translate="internship"></h3>
+	   					<p data-translate="internshipDate"></p>
 	   				</div>
 
 	   				<div class="timeline-content">
 	   					<h4>Esenca Software</h4>
-	   					<p id="presume">Learning and working on technologies (Bootstrap, AJAX, JSON, jQuery), solving specific tasks for client (working with API), solving front-end tasks for client (Bootstrap tasks).</p>
-						   <h3 style="font-size: 1.75rem;"><a href="https://drive.google.com/file/d/1RocFTef7IS-BZRohnQbvb3gdcyd_cYWx/view?usp=sharing" title="Certificate" target="_blank">Certificate</a></h3>
+	   					<p id="presume" data-translate="internshipText1"></p>
+						   <h3 style="font-size: 1.75rem;"><a href="https://drive.google.com/file/d/1RocFTef7IS-BZRohnQbvb3gdcyd_cYWx/view?usp=sharing" title="Certificate" target="_blank" data-translate="certificate"></a></h3>
 	   				</div>
 
 	   			</div> 
@@ -401,8 +408,8 @@
 		<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>Portfolio</h5>
-   			<h1>Check out some of my works</h1>
+   			<h5 data-translate="portfolioHeading"></h5>
+   			<h1 data-translate="portfolioText"></h1>
 
    			<!-- <p class="lead">Explore a selection of my projects to get a glimpse of the creative and technical expertise I bring to the table.</p> -->
 
@@ -423,8 +430,7 @@
 	                     <div class="folio-item-table">
 	                     	<div class="folio-item-cell">
 		     					       <h3 class="folio-title">Jevta Vegetables</h3>	     					    
-		     					    	 <span class="folio-types">
-		     					       	  My First Website 
+		     					    	 <span class="folio-types" data-translate="projectText1">
 		     					       </span>
 		     					   </div>	                      	
 	                     </div>                    
@@ -439,8 +445,7 @@
 	                     <div class="folio-item-table">
 	                     	<div class="folio-item-cell">
 	                     		<h3 class="folio-title">Esenca Software</h3>	     					    
-		     					    	<span class="folio-types">
-		     					       	  Web Development
+		     					    	<span class="folio-types" data-translate="projectText2">
 		     					      </span>		     		
 		     					   </div> 	                      	
 	                     </div>                    
@@ -455,8 +460,7 @@
 							  <div class="folio-item-table">
 								  <div class="folio-item-cell">
 									  <h3 class="folio-title">Currency Exchange</h3>	     					    
-											  <span class="folio-types">
-												   Currency Exchange Calculator
+											  <span class="folio-types" data-translate="projectText3">
 											</span>		     		
 										 </div> 	                      	
 							  </div>                    
@@ -503,8 +507,7 @@
 								  <div class="folio-item-table">
 									  <div class="folio-item-cell">
 										  <h3 class="folio-title">PearShop</h3>	     					    
-												  <span class="folio-types">
-													   Web Development
+												  <span class="folio-types" data-translate="projectText4">
 												</span>		     		
 											 </div> 	                      	
 								  </div>                    
@@ -521,15 +524,15 @@
 				     	</div>      	
 
 					   <div class="description-box">
-					      <h4>My First Website</h4>		      
-					      <p>First static website that I developed.</p>
+					      <h4>Jevta Vegetables</h4>		      
+					      <p data-translate="projectPopup1"></p>
 
-					      <div class="categories">Web Development</div>			               
+					      <div class="categories" data-translate="projectText2"></div>			               
 					   </div>
 
 			         <div class="link-box">
-			            <a href="https://jevtasite.github.io/JevtaVegetable/index.html" target="_blank">Visit</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
+			            <a href="https://jevtasite.github.io/JevtaVegetable/index.html" target="_blank" data-translate="projectButton1"></a>
+					      <a href="#" class="popup-modal-dismiss" data-translate="projectButton2"></a>
 			         </div>		      
 
 				   </div> <!-- /modal-01 -->
@@ -542,14 +545,14 @@
 
 					   <div class="description-box">
 					      <h4>Esenca Software</h4>		      
-					      <p>Website I did for an IT company.</p>
+					      <p data-translate="projectPopup2"></p>
 
-					      <div class="categories">Web Development</div>			               
+					      <div class="categories" data-translate="projectText2"></div>			               
 					   </div>
 
 			         <div class="link-box">
-			            <a href="https://jevtasite.github.io/Jevta-Esenca/" target="_blank">Visit</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
+			            <a href="https://jevtasite.github.io/Jevta-Esenca/" target="_blank" data-translate="projectButton1"></a>
+					      <a href="#" class="popup-modal-dismiss" data-translate="projectButton2"></a>
 			         </div>		      
 
 				   </div> <!-- /modal-02 -->
@@ -562,14 +565,14 @@
 
 					   <div class="description-box">
 					      <h4>PearShop</h4>		      
-					      <p>Integrating already-done elements to my website.</p>
+					      <p data-translate="projectPopup3"></p>
 
-					      <div class="categories">Web Development</div>			               
+					      <div class="categories" data-translate="projectText2"></div>			               
 					   </div>
 
 			         <div class="link-box">
-			            <a href="https://jevtasite.github.io/Jevta-PearShop/" target="_blank">Visit</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
+			            <a href="https://jevtasite.github.io/Jevta-PearShop/" target="_blank" data-translate="projectButton1"></a>
+					      <a href="#" class="popup-modal-dismiss" data-translate="projectButton2"></a>
 			         </div>		      
 
 				   </div> <!-- /modal-03 -->
@@ -622,14 +625,14 @@
 
 				  <div class="description-box">
 					 <h4>Currency Exchange Calculator</h4>		      
-					 <p>My first foray into APIs - a user-friendly currency exchange calculator that brings global currencies to your fingertips.</p>
+					 <p data-translate="projectPopup4"></p>
 
-					 <div class="categories">Web Development</div>			               
+					 <div class="categories" data-translate="projectText2"></div>			               
 				  </div>
 
 				<div class="link-box">
-				   <a href="https://jevtasite.github.io/JevtaCEC/index.html" target="_blank">Visit</a>
-					 <a href="#" class="popup-modal-dismiss">Close</a>
+				   <a href="https://jevtasite.github.io/JevtaCEC/index.html" target="_blank" data-translate="projectButton1"></a>
+					 <a href="#" class="popup-modal-dismiss" data-translate="projectButton1"></a>
 				</div>		  		      
 
 				   </div> <!-- /modal-06 -->
@@ -685,8 +688,8 @@
 		<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>Services</h5>
-   			<h1>How I can help</h1>
+   			<h5 data-translate="services"></h5>
+   			<h1 data-translate="servicesHeading"></h1>
 
    			<!--<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>-->
 
@@ -718,10 +721,9 @@
 
 	            <div class="service-content">	
 
-	            	<h3>Web Development</h3>  
+	            	<h3 data-translate="webDevelopment"></h3>  
 
-		            <p class="desc">Web development is not just my job; it's my passion. I take pride in creating captivating and functional websites that leave a lasting impact.
-						I specialize in crafting visually appealing and user-friendly front-end experiences.
+		            <p class="desc" data-translate="webDevelopmentDesc"> 
 	         		</p>
 
 	            </div>	                          
@@ -734,9 +736,9 @@
 
 	            <div class="service-content">
 
-	            	<h3>Branding</h3>
+	            	<h3 data-translate="branding"></h3>
 
-		            <p class="desc">I'll work with you to define a clear brand strategy that aligns with your business objectives. We'll establish your unique selling proposition, target audience, and the message you want to convey to create a brand that stands out.
+		            <p class="desc" data-translate="brandingDesc">
 	        			</p> 
 
 	            </div> 	            	               
@@ -779,9 +781,9 @@
 
 	            <div class="service-content">
 
-	            	 <h3>Consultancy</h3>
+	            	 <h3 data-translate="consultancy"></h3>
 
-		            <p class="desc">I'll work closely with you to define a comprehensive digital strategy that aligns with your business objectives. This includes setting clear goals, identifying target audiences, and crafting a roadmap for your digital journey.
+		            <p class="desc" data-translate="consultancyDesc">
 	        			</p> 
 	        			
 	            </div>	               
@@ -814,8 +816,7 @@
 							2
 						</h3>
 
-						<h5 class="stat-title">
-							Years of experience
+						<h5 class="stat-title" data-translate="counter1">
 						</h5>
 
 					</div> <!-- /stat -->					
@@ -830,8 +831,7 @@
 							3
 						</h3>
 
-						<h5 class="stat-title">
-							Clients
+						<h5 class="stat-title" data-translate="counter2">
 						</h5>
 
 					</div> <!-- /stat -->
@@ -846,8 +846,7 @@
 							8
 						</h3>
 
-						<h5 class="stat-title">
-							Projects
+						<h5 class="stat-title" data-translate="counter3">
 						</h5>
 
 					</div> <!-- /stat -->									
@@ -862,8 +861,7 @@
 							2400
 						</h3>
 
-						<h5 class="stat-title">
-							Hours of development
+						<h5 class="stat-title" data-translate="counter4">
 						</h5>
 
 					</div> <!-- /stat -->
@@ -915,10 +913,10 @@
 		<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>Contact</h5>
-   			<h1>I'd love to hear from you</h1>
+   			<h5 data-translate="contact"></h5>
+   			<h1 data-translate="contactHeading"></h1>
 
-   			<p class="lead">I’m always up for working on cool projects and connecting with other tech enthusiasts. Got an idea for a project, or just want to chat about web development? Feel free to reach out!</p>
+   			<p class="lead" data-translate="contactText"></p>
 
    		</div> 
    	</div> <!-- /section-intro -->
@@ -992,7 +990,7 @@
    				<i class="icon-mail"></i>
    			</div>
 
-   			<h5>Email Me At</h5>
+   			<h5 data-translate="contactEmail"></h5>
 
    			<a id="siva" href="#" onclick="openGmail()" target="_blank">jevta.site@gmail.com</a></li>
 
@@ -1004,7 +1002,7 @@
    				<i class="icon-phone"></i>
    			</div>
 
-   			<h5>Call Me At</h5>
+   			<h5 data-translate="contactPhone"></h5>
 
    			<p>(+381) 64 494 3411</p>
 
@@ -1055,6 +1053,7 @@
    <script src="js/plugins.js"></script>
    <script src="js/main.js"></script>
    <script src="js/index.js"></script>
+   <script src="js/lang.js"></script>
 
 </body>
 

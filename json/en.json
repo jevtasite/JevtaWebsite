@@ -1,0 +1,79 @@
+{
+  "menuHome": "Home",
+  "menuAbout": "About",
+  "menuResume": "Resume",
+  "menuPortfolio": "Portfolio",
+  "menuServices": "Services",
+  "menuContact": "Contact",
+
+  "introHello": "Hello, World.",
+  "introName": "I'm Luka Stoiljković",
+  "introRole": "Front-end Developer",
+  "introButton": "More About Me",
+
+  "aboutHeading": "Let me introduce myself",
+  "aboutText1": "Hey, I’m Luka. I’m a front-end web developer who loves turning ideas into clean, responsive websites. I enjoy making sites that are easy to use and look good. I’m always learning new things and like figuring out better ways to solve problems on the web.",
+
+  "profileHeading": "Profile",
+  "profileText": "Front-end developer passionate about building websites that are easy to use, engaging, and look great on any device. I enjoy coming up with creative ways to make sites work better and feel more enjoyable for users.",
+  "fullname": "Fullname",
+  "birthDate": "Birth Date",
+  "birthDay": "July 3rd, 2005",
+  "job": "Job",
+  "jobDesc": "Freelancer",
+  "website": "Website",
+  "email": "Email",
+
+  "skills": "Skills",
+  "skillsText1": "Transforming design into structured, responsive web pages.",
+  "skillsText2": "Leveraging the power of Bootstrap to create sleek and mobile-friendly web layouts with ease.",
+  "skillsText3": "Adding interactivity and enhancing user experiences.",
+  "skillsText4": "Enhancing user interfaces and simplifying complex tasks.",
+  "skillsText5": "Building dynamic and seamless web applications that communicate with the server in the background, ensuring a smoother user experience.",
+  "skillsButton1": "Hire me",
+  "skillsButton2": "Download CV",
+
+  "resumeHeading": "Resume",
+  "resumeCredentials": "More of my credentials",
+  "resumeWork": "Work Experience",
+  "internship": "Internship",
+  "internshipText1": "Learning and working on technologies (Bootstrap, AJAX, JSON, jQuery), solving specific tasks for client (working with API), solving front-end tasks for client (Bootstrap tasks).", 
+  "internshipDate": "May 2023 - June 2023",
+  "certificate": "Certificate",
+
+  "portfolioHeading": "Portfolio",
+  "portfolioText": "Some of my recent works",
+
+  "projectText1": "My first website",
+  "projectText2": "Web development",
+  "projectText3": "Currency Exchange",
+  "projectText4": "Web development",
+  
+  "projectPopup1": "First static website that I developed.",
+  "projectPopup2": "Website I did for an IT company.",
+  "projectPopup3": "Integrating already-done elements to my website.",
+  "projectPopup4": "My first foray into APIs - a simple currency exchange calculator.",
+
+  "projectButton1": "Visit",
+  "projectButton2": "Close",
+
+  "services": "Services",
+  "servicesHeading": "How I can help",
+  "webDevelopment": "Web Development",
+  "webDevelopmentDesc": "Building fast, modern and responsive websites with clean code.",
+  "branding": "Branding",
+  "brandingDesc": "Creating unique digital presence and identity for your business.",
+  "consultancy": "Consultancy",
+  "consultancyDesc": "Helping you choose the best solutions for your website or project.",
+
+  "counter1": "Years of experience",
+  "counter2": "Clients",
+  "counter3": "Projects",
+  "counter4": "Hours of development",
+
+  "contact": "Contact",
+  "contactHeading": "I'd love to hear from you",
+  "contactText": "I’m always up for working on cool projects and connecting with other tech enthusiasts. Got an idea for a project, or just want to chat about web development? Feel free to reach out!",
+  "contactEmail": "Email Me At",
+  "contactPhone": "Call me at"
+}

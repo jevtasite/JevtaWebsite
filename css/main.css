@@ -2435,6 +2435,10 @@ header .logo a {
 	color: #FF0077;
 }
 
+#siva {
+	color: gray;
+}
+
 /**
  * loader animation - (_layout.scss)
  * --------------------------------------------------------------- 
@@ -2607,26 +2611,44 @@ footer .copyright span:last-child::after {
 
 /* NOVO-DODATO */ 
 .language {
-	float: right;
-	width: 46px;
-	height: 35px;
-	background-color: #000;
-	border: 2px solid #000;
-	transition: all 0.3s ease-in-out;
+  display: flex;           
+  gap: 10px;               
+  align-items: center;
+  justify-content: flex-end;   
 }
 
-.language:hover {
-	border: 2px solid #cc005f;
+.lang-flag {
+  width: 40px;             
+  height: auto;          
+  cursor: pointer;
+  margin: 5px;
+  transition: transform 0.2s ease;
 }
 
-#country {
-	margin: 2px 6px;
-	width: 30px;
-	height: 25px;
+.lang-flag:hover {
+  transform: scale(1.1);
 }
 
-#siva {
-	color: gray;
+.lang-flag.active {
+  transform: scale(1.3);
+  border-radius: 1px;
+   box-shadow: 0 0 5px 3px #cc005f; 
+}
+
+@media (max-width: 448px) { /* bootstrap small devices */
+  .language {
+    flex-direction: column; /* stack vertically */
+    align-items: flex-end;  /* keep them on the right */
+  }
+
+  .lang-flag {
+	margin: 2px;
+  }
+
+}
+
+@media (max-width: 368px) {
+	.language {padding-right: 5px;}
 }
 
 /* BACKGROUND VIDEO */
@@ -2682,16 +2704,14 @@ footer .copyright span:last-child::after {
   transform: translateY(0);
 }
 
-/* Project Card or Section Hover Effects */
 a, button {
   transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
 }
 
-/* Scale + slide fade-in for white sections only */
 .white-section .fade-in-content {
   opacity: 0;
   transform: translateY(20px) scale(0.95);
-  background-color: white; /* ensures no dark flash */
+  background-color: white; 
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -2702,7 +2722,6 @@ a, button {
 
 /* GREY SECTION ANIMATION */
 
-/* Scale + slide fade-in for grey section */
 .grey-section .fade-in-content {
   opacity: 0;
   transform: translateY(20px) scale(0.95);
@@ -2723,3 +2742,4 @@ a, button {
 	}
 	
 }
+
