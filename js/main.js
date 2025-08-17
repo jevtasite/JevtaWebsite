@@ -188,22 +188,20 @@
 
 
 	/*---------------------------------------------------- */
-  	/* Smooth Scrolling
-  	------------------------------------------------------ */
-  	$('.smoothscroll').on('click', function (e) {
-	 	
-	 	e.preventDefault();
+/* Smooth Scrolling
+------------------------------------------------------ */
+$('.smoothscroll').on('click', function (e) {
 
-   	var target = this.hash,
-    	$target = $(target);
+  e.preventDefault();
 
-    	$('html, body').stop().animate({
-       	'scrollTop': $target.offset().top
-      }, 800, 'swing', function () {
-      	window.location.hash = target;
-      });
+  var target = this.hash,
+      $target = $(target);
 
-  	});  
+  $('html, body').stop().animate({
+      'scrollTop': $target.offset().top
+  }, 800, 'swing');
+
+});
   
 
    /*---------------------------------------------------- */
@@ -381,5 +379,49 @@
 });
 
 })(jQuery);
+
+
+/* ANIMATIONS 
+  	------------------------------------------------------ */
+
+	// Black section animation
+
+document.addEventListener("DOMContentLoaded", function() {
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.1
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); 
+      }
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+});
+
+// Gray and white section animation 
+
+document.addEventListener("DOMContentLoaded", function() {
+  const lightFaders = document.querySelectorAll('.white-section .fade-in-content, .grey-section .fade-in-content');
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  lightFaders.forEach(fader => appearOnScroll.observe(fader));
+});
 
 

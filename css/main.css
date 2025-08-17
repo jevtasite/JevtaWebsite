@@ -2629,6 +2629,8 @@ footer .copyright span:last-child::after {
 	color: gray;
 }
 
+/* BACKGROUND VIDEO */
+
 .bg-video {
   position: absolute;
   top: 0;
@@ -2639,6 +2641,7 @@ footer .copyright span:last-child::after {
   z-index: -1; 
 }
 
+/* TYPING TEXT */
 
 #typing-text {
   border-right: 3px solid #cc005f;
@@ -2664,4 +2667,59 @@ footer .copyright span:last-child::after {
 @keyframes blink {
   0%, 50% { border-color: #cc005f; }
   50.01%, 100% { border-color: transparent; }
+}
+
+/* ANIMATIONS */
+/* Scroll Fade-In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Project Card or Section Hover Effects */
+a, button {
+  transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Scale + slide fade-in for white sections only */
+.white-section .fade-in-content {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  background-color: white; /* ensures no dark flash */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.white-section .fade-in-content.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* GREY SECTION ANIMATION */
+
+/* Scale + slide fade-in for grey section */
+.grey-section .fade-in-content {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  background-color: inherit;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.grey-section .fade-in-content.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* About text line up */
+
+@media (max-width: 768px) {
+	.about-content {
+		text-align: center;
+	}
+	
 }
