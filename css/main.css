@@ -1115,18 +1115,9 @@ header .logo {
 }
 
 header .logo a {
-  display: block;
-  color: transparent;
-  background: linear-gradient(90deg, #ff0077, #ffffff, #ff0077);
-  background-size: 200% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  animation: shine 3s linear infinite;
-}
-
-@keyframes shine {
-  0% { background-position: -100% 0; }
-  100% { background-position: 100% 0; }
+  position: relative;
+  color: white;
+  text-decoration: none;
 }
 
 /**
@@ -2409,6 +2400,18 @@ header .logo a {
 	background: #FF0077;
 	color: #FFFFFF;
 }
+
+#contact .fade-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#contact .fade-item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 #contact button.submitform:hover, #contact button.submitform:focus {
 	background: #cc005f;
 }
@@ -2667,7 +2670,7 @@ footer .copyright span:last-child::after {
 }
 
 .lang-flag:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .lang-flag.active {
@@ -2676,32 +2679,48 @@ footer .copyright span:last-child::after {
   box-shadow: 0 0 5px 3px #cc005f; 
 }
 
-@media (max-width: 415px) {
+@media (max-width: 430px) {
 	.language {
-		padding-right: 30px;
-		padding-top: 8px; 
-		flex-direction: column; 
-        align-items: flex-end;  
+		padding-right: 0px;
+		padding-top: 10px;  
 	}
 
 	.lang-flag {
+	width: 35px;
 	margin: 2px;
+  }
+} 
+
+@media (max-width: 430px) {
+	.language {
+		padding-top: 20px;
+		padding-right: 5px;
+	}
+	.lang-flag {
+		width: 35px;
+	}
+}
+
+@media (max-width: 425px) {
+	.language {
+		padding-top: 20px;
+	}
+	.lang-flag {
+		width: 30px;
+	}
+}
+@media (max-width: 380px) {
+  .language {
+    display: flex;           
+    flex-direction: column;  
+    align-items: flex-end;   
+    gap: 5px;                
+    padding-top: 10px;       
   }
 }
 
-@media (max-width: 390px) {
-	.language {
-      padding-right: 25px;
-	}
-}
 
-@media (max-width: 380px) {
-	.language {
-      padding-right: 20px;
-	}
-}
-
-@media (max-width: 370px) {
+@media (max-width: 375px) {
 	.language {
       padding-right: 15px;
 	}
@@ -2715,7 +2734,8 @@ footer .copyright span:last-child::after {
 
 @media (max-width: 355px) {
 	.language {
-      padding-right: 5px;
+      padding-right: 0px;
+	  padding-left: 5px;
 	}
 }
 
@@ -2811,9 +2831,9 @@ a, button {
 	
 }
 
-/* about section animation */
+/* About section animation */
 
-/* paragraph effects */
+/* Paragraph effects */
 .intro-info p.lead {
   opacity: 0;
   transform: translateX(-20px); 
@@ -2828,7 +2848,7 @@ a, button {
 /* Profile paragraph slide/fade */
 [data-translate="profileText"] {
   opacity: 0;
-  transform: translateX(-20px); /* start slightly left */
+  transform: translateX(-20px); 
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -2837,7 +2857,7 @@ a, button {
   transform: translateX(0);
 }
 
-/* skills animation */
+/* Skills animation */
 
 .skillsanimation {
   position: relative;
@@ -2859,12 +2879,12 @@ a, button {
   width: 100%;
 }
 
-/* info list animation */
+/* Info list animation */
 
 .info-list-animate li {
     opacity: 0;
     transform: translateY(20px); 
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .info-list-animate li.animate {
@@ -2873,7 +2893,7 @@ a, button {
 }
 
 
-/* about button animation */
+/* About button animation */
 
 .fade-left {
     opacity: 0;
@@ -2885,4 +2905,22 @@ a, button {
     opacity: 1;
     transform: translateX(0);
 }
+
+/* Stats effects */
+
+.stat {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stat.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat:nth-child(1) { transition-delay: 0.1s; }
+.stat:nth-child(2) { transition-delay: 0.3s; }
+.stat:nth-child(3) { transition-delay: 0.5s; }
+.stat:nth-child(4) { transition-delay: 0.7s; }
 

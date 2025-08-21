@@ -44,16 +44,22 @@
 	/*---------------------------------------------------- */
 	/* Owl Carousel
 	------------------------------------------------------ */ 
-	$("#owl-slider").owlCarousel({
+	$(document).ready(function() {
+    var isMobile = $(window).width() < 960; 
+
+    $("#owl-slider").owlCarousel({
         navigation: false,
         pagination: true,
-        itemsCustom : [
-	        [0, 1],
-	        [700, 2],
-	        [960, 3]
-	     ],
-        navigationText: false
+        itemsCustom: [
+            [0, 1],     
+            [700, 2],   
+            [961, 3]    
+        ],
+        navigationText: false,
+        autoPlay: isMobile ? 5000 : false 
     });
+});
+
 
 
 	/*----------------------------------------------------- */
@@ -296,14 +302,13 @@ $('.smoothscroll').on('click', function (e) {
   let charIndex = 0;
   let isDeleting = false;
 
-  const typingSpeed = 130;    // typing speed
-  const deletingSpeed = 50;   // deleting speed
-  const delayBetween = 1700;  // pause after a full phrase
+  const typingSpeed = 130;    
+  const deletingSpeed = 50;  
+  const delayBetween = 1700;  
 
   function type() {
     const currentPhrase = phrases[phraseIndex];
 
-    // ensure solid cursor while typing
     typingEl.classList.remove("blinking");
 
     if (isDeleting) {
@@ -319,7 +324,7 @@ $('.smoothscroll').on('click', function (e) {
     if (!isDeleting && charIndex === currentPhrase.length) {
       timeout = delayBetween;
       isDeleting = true;
-      typingEl.classList.add("blinking"); // blink when pausing
+      typingEl.classList.add("blinking"); 
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       phraseIndex = (phraseIndex + 1) % phrases.length;
@@ -342,14 +347,13 @@ $('.smoothscroll').on('click', function (e) {
   let charIndex = 0;
   let isDeleting = false;
 
-  const typingSpeed = 130;    // typing speed
-  const deletingSpeed = 50;   // deleting speed
-  const delayBetween = 1700;  // pause after a full phrase
+  const typingSpeed = 130;    
+  const deletingSpeed = 50;
+  const delayBetween = 1700;  
 
   function type() {
     const currentPhrase = phrases[phraseIndex];
 
-    // ensure solid cursor while typing
     typingEl.classList.remove("blinking");
 
     if (isDeleting) {
@@ -365,7 +369,7 @@ $('.smoothscroll').on('click', function (e) {
     if (!isDeleting && charIndex === currentPhrase.length) {
       timeout = delayBetween;
       isDeleting = true;
-      typingEl.classList.add("blinking"); // blink when pausing
+      typingEl.classList.add("blinking"); 
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       phraseIndex = (phraseIndex + 1) % phrases.length;
@@ -407,12 +411,14 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// Gray and white section animation 
+// ======================================
+// DOM Ready
+// ======================================
+document.addEventListener("DOMContentLoaded", () => {
 
-document.addEventListener("DOMContentLoaded", function() {
+  // ---------- Fade-in for white/grey sections ----------
   const lightFaders = document.querySelectorAll('.white-section .fade-in-content, .grey-section .fade-in-content');
-
-  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  const fadeObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
         entry.target.classList.add('visible');
@@ -420,14 +426,11 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }, { threshold: 0.1 });
+  lightFaders.forEach(fader => fadeObserver.observe(fader));
 
-  lightFaders.forEach(fader => appearOnScroll.observe(fader));
-});
-
-//about paragraph animation 
-
-window.addEventListener('load', () => {
-  const observer = new IntersectionObserver((entries) => {
+  // ---------- Skills & intro paragraph ----------
+  const skillsAndIntro = document.querySelectorAll('.skillsanimation, .intro-info p.lead');
+  const skillsObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
         entry.target.classList.add('animate');
@@ -435,78 +438,86 @@ window.addEventListener('load', () => {
       }
     });
   }, { threshold: 0.5 });
+  skillsAndIntro.forEach(el => skillsObserver.observe(el));
 
-  document.querySelectorAll('.skillsanimation, .intro-info p.lead').forEach(el => {
-    observer.observe(el);
-  });
-});
-
-window.addEventListener('load', () => {
-  const observer = new IntersectionObserver((entries) => {
+  // ---------- Profile text ----------
+  const profileText = document.querySelectorAll('[data-translate="profileText"]');
+  const profileObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
         entry.target.classList.add('animate');
-        observer.unobserve(entry.target); 
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.5 });
+  profileText.forEach(el => profileObserver.observe(el));
 
-  document.querySelectorAll('[data-translate="profileText"]').forEach(el => {
-    observer.observe(el);
-  });
+  // ---------- Info list staggered animation ----------
+  const infoItems = document.querySelectorAll('.info-list-animate li');
+  const infoObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const delay = Array.from(infoItems).indexOf(entry.target) * 200; // stagger 0.2s
+        setTimeout(() => {
+          entry.target.classList.add('animate');
+        }, delay);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  infoItems.forEach(el => infoObserver.observe(el));
+
+  // ---------- About buttons staggered animation ----------
+  const buttons = document.querySelectorAll('.fade-left');
+  const buttonObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const delay = Array.from(buttons).indexOf(entry.target) * 300; // stagger 0.3s
+        setTimeout(() => {
+          entry.target.classList.add('animate');
+        }, delay);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  buttons.forEach(el => buttonObserver.observe(el));
+
 });
 
-// about skills animation
-
-const observer = new IntersectionObserver((entries) => {
+// ======================================
+// Stats staggered animation
+// ======================================
+const statsObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate');
-      observer.unobserve(entry.target); // animate once
+    if(entry.isIntersecting){
+      const stats = entry.target.querySelectorAll('.stat');
+      stats.forEach((stat, index) => {
+        setTimeout(() => stat.classList.add('animate'), index * 200); // stagger 0.2s
+      });
+      statsObserver.unobserve(entry.target);
     }
   });
 }, { threshold: 0.5 });
 
-document.querySelectorAll('.skillsanimation').forEach(el => {
-  observer.observe(el);
+const statsSection = document.querySelector('#stats');
+if(statsSection) statsObserver.observe(statsSection);
+
+// ======================================
+//Contact animation
+// ======================================
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll('#contact h1, #contact h5, #contact p.lead, #contact .contact-info > div');
+
+  elements.forEach(el => el.classList.add('fade-item'));
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('animate');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
 });
-
-// info list animation 
-
-window.addEventListener('load', () => {
-    const items = document.querySelectorAll('.info-list-animate li');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                const delay = Array.from(items).indexOf(entry.target) * 200; // 0.2s stagger
-                setTimeout(() => {
-                    entry.target.classList.add('animate');
-                }, delay);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-
-    items.forEach(el => observer.observe(el));
-});
-
-
-// about buttons animation 
-
-window.addEventListener('load', () => {
-    const buttons = document.querySelectorAll('.fade-left');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                const delay = Array.from(buttons).indexOf(entry.target) * 300; // 0.3s stagger
-                setTimeout(() => {
-                    entry.target.classList.add('animate');
-                }, delay);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    buttons.forEach(el => observer.observe(el));
-});
-
