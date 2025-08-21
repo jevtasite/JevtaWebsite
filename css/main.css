@@ -1105,24 +1105,28 @@ header .top-bar {
 	top: 0;
 }
 header .logo {
-	float: left;
-	margin-left: 20px;
-	margin-right: 50px;
-	margin-top: 25px;
-	position: relative;
+  float: left;
+  margin-left: 20px;
+  margin-right: 50px;
+  margin-top: 20px;
+  position: relative;
+  font-size: 32px;       
+  font-weight: bold;
 }
+
 header .logo a {
-	display: block;
-	margin: 0;
-	padding: 0;
-	border: none;
-	font: 0/0 a;
-	text-shadow: none;
-	color: transparent;
-	width: 92px;
-	height: 15px;
-	background: url("../images/logo.png") no-repeat center;
-	background-size: 92px 15px;
+  display: block;
+  color: transparent;
+  background: linear-gradient(90deg, #ff0077, #ffffff, #ff0077);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: -100% 0; }
+  100% { background-position: 100% 0; }
 }
 
 /**
@@ -1232,7 +1236,7 @@ header .logo a {
 /* dropdown nav */
 .main-navigation {
 	background: #000000;
-	padding: 24px 30px 42px;
+	padding: 10px 30px 35px;
 	margin: 0;
 	width: 100%;
 	height: auto;
@@ -1244,6 +1248,7 @@ header .logo a {
 	height: auto;
 	text-align: left;
 	padding: 0;
+	text-align: center;
 }
 .main-navigation li a {
 	display: block;
@@ -1255,11 +1260,33 @@ header .logo a {
 }
 .main-navigation li a:hover {
 	color: #FF0077;
-	padding-left: 1rem;
 }
 .main-navigation li.current > a {
 	background: none;
 	color: #FF0077;
+}
+
+/* underline effect for nav links */
+.main-navigation li a {
+  position: relative;
+  text-decoration: none;
+}
+
+.main-navigation li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;                
+  bottom: 4px;                
+  width: 0;
+  height: 2px;              
+  background-color: currentColor;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%); 
+}
+
+.main-navigation li a:hover::after,
+.main-navigation li.current > a::after {
+  width: 60%;
 }
 
 /**
@@ -1511,7 +1538,14 @@ header .logo a {
 	border-radius: 50%;
 	margin: .1rem 0 0 0;
 	float: left;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.intro-info img:hover {
+   transform: scale(1.1);
+   box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* subtle shadow */
+}
+
 .intro-info .lead {
 	text-align: left;
 	padding-left: 13rem;
