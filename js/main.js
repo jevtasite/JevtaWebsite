@@ -424,4 +424,89 @@ document.addEventListener("DOMContentLoaded", function() {
   lightFaders.forEach(fader => appearOnScroll.observe(fader));
 });
 
+//about paragraph animation 
+
+window.addEventListener('load', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.skillsanimation, .intro-info p.lead').forEach(el => {
+    observer.observe(el);
+  });
+});
+
+window.addEventListener('load', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target); 
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('[data-translate="profileText"]').forEach(el => {
+    observer.observe(el);
+  });
+});
+
+// about skills animation
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+      observer.unobserve(entry.target); // animate once
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.skillsanimation').forEach(el => {
+  observer.observe(el);
+});
+
+// info list animation 
+
+window.addEventListener('load', () => {
+    const items = document.querySelectorAll('.info-list-animate li');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                const delay = Array.from(items).indexOf(entry.target) * 200; // 0.2s stagger
+                setTimeout(() => {
+                    entry.target.classList.add('animate');
+                }, delay);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    items.forEach(el => observer.observe(el));
+});
+
+
+// about buttons animation 
+
+window.addEventListener('load', () => {
+    const buttons = document.querySelectorAll('.fade-left');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                const delay = Array.from(buttons).indexOf(entry.target) * 300; // 0.3s stagger
+                setTimeout(() => {
+                    entry.target.classList.add('animate');
+                }, delay);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    buttons.forEach(el => observer.observe(el));
+});
 

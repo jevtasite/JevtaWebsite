@@ -1533,22 +1533,25 @@ header .logo a {
 	margin-left: -30px;
 }
 .intro-info img {
-	height: 10rem;
-	width: 10rem;
-	border-radius: 50%;
-	margin: .1rem 0 0 0;
-	float: left;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    margin: .1rem 0 0 0;
+    float: left;
+	position: relative;   
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center;
 }
 
 .intro-info img:hover {
-   transform: scale(1.1);
-   box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* subtle shadow */
+    transform: scale(1.1); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); 
 }
 
 .intro-info .lead {
-	text-align: left;
-	padding-left: 13rem;
+    text-align: left;
+    padding-left: 13rem;
 }
 
 .about-content {
@@ -2806,5 +2809,80 @@ a, button {
 		text-align: center;
 	}
 	
+}
+
+/* about section animation */
+
+/* paragraph effects */
+.intro-info p.lead {
+  opacity: 0;
+  transform: translateX(-20px); 
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.intro-info p.lead.animate {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+/* Profile paragraph slide/fade */
+[data-translate="profileText"] {
+  opacity: 0;
+  transform: translateX(-20px); /* start slightly left */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-translate="profileText"].animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* skills animation */
+
+.skillsanimation {
+  position: relative;
+  display: inline-block;
+}
+
+.skillsanimation::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px; 
+  background: linear-gradient(90deg, #c50277, #ff0077, #c50277);
+  transition: width 1s ease;
+}
+
+.skillsanimation.animate::after {
+  width: 100%;
+}
+
+/* info list animation */
+
+.info-list-animate li {
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.info-list-animate li.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* about button animation */
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-20px); 
+    transition: opacity 0.8s ease, transform 0.8s ease; 
+}
+
+.fade-left.animate {
+    opacity: 1;
+    transform: translateX(0);
 }
 
