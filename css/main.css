@@ -2924,3 +2924,21 @@ a, button {
 .stat:nth-child(3) { transition-delay: 0.5s; }
 .stat:nth-child(4) { transition-delay: 0.7s; }
 
+/* Copyright shine */
+
+@keyframes shine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.col-eight.tab-full .copyright span.shine-logo {
+    display: inline-block;
+    vertical-align: middle;
+    background: linear-gradient(75deg, #dbdbdb, #cc005f, #dbdbdb);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    color: transparent; 
+    animation: shine 3.5s linear infinite;
+}

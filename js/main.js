@@ -45,21 +45,32 @@
 	/* Owl Carousel
 	------------------------------------------------------ */ 
 	$(document).ready(function() {
-    var isMobile = $(window).width() < 960; 
+    const $slider = $("#owl-slider");
 
-    $("#owl-slider").owlCarousel({
-        navigation: false,
-        pagination: true,
-        itemsCustom: [
-            [0, 1],     
-            [700, 2],   
-            [961, 3]    
-        ],
-        navigationText: false,
-        autoPlay: isMobile ? 5000 : false 
+    function initCarousel() {
+        const isMobile = $(window).width() < 960;
+
+        $slider.owlCarousel({
+            navigation: false,
+            pagination: true,
+            itemsCustom: [
+                [0, 1],
+                [700, 2],
+                [961, 3]
+            ],
+            navigationText: false,
+            autoPlay: isMobile ? 5000 : false,
+            stopOnHover: false
+        });
+    }
+
+    initCarousel();
+
+    $(window).on('resize', function() {
+        $slider.trigger('destroy.owl.carousel');
+        initCarousel();
     });
 });
-
 
 
 	/*----------------------------------------------------- */
@@ -73,37 +84,33 @@
 	/*----------------------------------------------------- */
 	/* Stat Counter
   	------------------------------------------------------- */
-   var statSection = $("#stats"),
-       stats = $(".stat-count");
+   /*var statSection = $("#stats"),
+    stats = $(".stat-count");
 
-   statSection.waypoint({
+statSection.waypoint({
+    handler: function(direction) {
+        if (direction === "down") {   
 
-   	handler: function(direction) {
+            // Wait until fade-in animation completes
+            setTimeout(function() {
+                stats.each(function () {
+                    var $this = $(this);
+                    $({ Counter: 0 }).animate({ Counter: $this.text() }, {
+                        duration: 5500,
+                        easing: 'swing',
+                        step: function (curValue) {
+                            $this.text(Math.ceil(curValue));
+                        }
+                    });
+                });
+            }, 600); 
 
-      	if (direction === "down") {       		
+        }
+        this.destroy(); 
+    },
+    offset: "90%"
+});*/
 
-			   stats.each(function () {
-				   var $this = $(this);
-
-				   $({ Counter: 0 }).animate({ Counter: $this.text() }, {
-				   	duration: 4000,
-				   	easing: 'swing',
-				   	step: function (curValue) {
-				      	$this.text(Math.ceil(curValue));
-				    	}
-				  	});
-				});
-
-       	} 
-
-       	// trigger once only
-       	this.destroy();      	
-
-		},
-			
-		offset: "90%"
-	
-	});	
 
 
 	/*---------------------------------------------------- */
@@ -454,46 +461,87 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ---------- Info list staggered animation ----------
   const infoItems = document.querySelectorAll('.info-list-animate li');
+  const buttons = document.querySelectorAll('.fade-left');
+
+  let totalListTime = (infoItems.length - 1) * 200 + 800; // how long list should take
+
   const infoObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      if(entry.isIntersecting){
-        const delay = Array.from(infoItems).indexOf(entry.target) * 200; // stagger 0.2s
-        setTimeout(() => {
-          entry.target.classList.add('animate');
-        }, delay);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-  infoItems.forEach(el => infoObserver.observe(el));
+      if (entry.isIntersecting) {
+        const index = Array.from(infoItems).indexOf(entry.target);
+        const delay = index * 200;
 
-  // ---------- About buttons staggered animation ----------
-  const buttons = document.querySelectorAll('.fade-left');
-  const buttonObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        const delay = Array.from(buttons).indexOf(entry.target) * 300; // stagger 0.3s
         setTimeout(() => {
           entry.target.classList.add('animate');
         }, delay);
+
+        // if last item trigger buttons
+        if (index === infoItems.length - 1) {
+          setTimeout(() => animateButtons(), delay + 400);
+        }
+
         observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.5 });
-  buttons.forEach(el => buttonObserver.observe(el));
 
-});
+  infoItems.forEach(el => infoObserver.observe(el));
 
-// ======================================
-// Stats staggered animation
-// ======================================
-const statsObserver = new IntersectionObserver(entries => {
+  // Fallback ensure buttons always animate even if list skipped
+  setTimeout(() => {
+    animateButtons();
+  }, totalListTime + 1000);
+
+  function animateButtons() {
+    buttons.forEach((btn, i) => {
+      setTimeout(() => {
+        btn.classList.add('animate');
+      }, i * 300);
+    });
+  }
+
+  // ---------- Stats staggered animation ----------
+  const statsObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
       const stats = entry.target.querySelectorAll('.stat');
-      stats.forEach((stat, index) => {
-        setTimeout(() => stat.classList.add('animate'), index * 200); // stagger 0.2s
-      });
+
+      function animateStat(index) {
+        if(index >= stats.length) return;
+
+        const stat = stats[index];
+        const countEl = stat.querySelector('.stat-count');
+
+        // store the final number
+        const finalValue = parseInt(countEl.textContent);
+
+        // reset to 0
+        countEl.textContent = '0';
+
+        // fade in
+        stat.classList.add('animate');
+
+        const fadeDuration = 600; 
+        setTimeout(() => {
+          let start = 0;
+          const duration = 650; 
+          const stepTime = 5;
+          const step = (finalValue / (duration / stepTime));
+
+          const counterInterval = setInterval(() => {
+            start += step;
+            if(start >= finalValue) {
+              countEl.textContent = finalValue;
+              clearInterval(counterInterval);
+              animateStat(index + 1); 
+            } else {
+              countEl.textContent = Math.ceil(start);
+            }
+          }, stepTime);
+        }, fadeDuration);
+      }
+
+      animateStat(0);
       statsObserver.unobserve(entry.target);
     }
   });
@@ -502,15 +550,12 @@ const statsObserver = new IntersectionObserver(entries => {
 const statsSection = document.querySelector('#stats');
 if(statsSection) statsObserver.observe(statsSection);
 
-// ======================================
-//Contact animation
-// ======================================
-document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll('#contact h1, #contact h5, #contact p.lead, #contact .contact-info > div');
+  // ---------- Contact animation ----------
+  const contactElements = document.querySelectorAll('#contact h1, #contact h5, #contact p.lead, #contact .contact-info > div');
 
-  elements.forEach(el => el.classList.add('fade-item'));
+  contactElements.forEach(el => el.classList.add('fade-item'));
 
-  const observer = new IntersectionObserver((entries, obs) => {
+  const contactObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
         entry.target.classList.add('animate');
@@ -519,5 +564,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, { threshold: 0.1 });
 
-  elements.forEach(el => observer.observe(el));
+  contactElements.forEach(el => contactObserver.observe(el));
+
 });

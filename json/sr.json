@@ -11,10 +11,10 @@
   "introButton": "Više o meni",
 
   "aboutHeading": "Da Vam se predstavim",
-  "aboutText1": "Ćao, ja sam Luka. Front-end programer koji voli da pretvara ideje u čiste, responzivne veb sajtove. Uživam da pravim sajtove koji se lako koriste i dobro izgledaju. Uvek učim nove stvari i volim da pronalazim bolja rešenja za web probleme.",
+  "aboutText1": "Ćao, ja sam Luka, front-end programer koji voli da pretvara ideje u čiste, responzivne veb sajtove. Uživam da pravim sajtove koji se lako koriste i dobro izgledaju. Uvek učim nove stvari i volim da pronalazim bolja rešenja za veb probleme.",
 
   "profileHeading": "Profil",
-  "profileText": "Front-end programer sa strašću za izgradnju sajtova koji su laki za korišćenje, zanimljivi i dobro prikazani na bilo kom uređaju. Volim da nalazim kreativne načine za bolje i prijatnije korisničko iskustvo.",
+  "profileText": "Front-end programer sa strašću za izradu sajtova koji su laki za korišćenje, zanimljivi i dobro prikazani na bilo kom uređaju. Volim da nalazim kreativne načine za što bolje korisničko iskustvo.",
   "fullname": "Ime i prezime",
   "birthDate": "Datum rođenja",
   "birthDay": "3. jul 2005.",
@@ -25,7 +25,7 @@
 
   "skills": "Veštine",
   "skillsText1": "Transformacija dizajna u strukturirane, responzivne veb stranice.",
-  "skillsText2": "Korišćenje Bootstrap-a za lako kreiranje elegantnih veb-sajtova koji su prilagođeni mobilnim uređajima.",
+  "skillsText2": "Korišćenje Bootstrap-a za lako kreiranje elegantnih veb sajtova koji su prilagođeni mobilnim uređajima.",
   "skillsText3": "Dodavanje interaktivnosti i poboljšanje korisničkog iskustva.",
   "skillsText4": "Poboljšanje korisničkih interfejsa i pojednostavljivanje složenih zadataka.",
   "skillsText5": "Izrada dinamičnih veb aplikacija koje komuniciraju sa serverom u pozadini, obezbeđujući bolje korisničko iskustvo.",
@@ -58,7 +58,7 @@
 
   "services": "Usluge",
   "servicesHeading": "Kako mogu da pomognem",
-  "webDevelopment": "Veb razvoj",
+  "webDevelopment": "Veb programiranje",
   "webDevelopmentDesc": "Izrada brzih, modernih i responzivnih sajtova sa čistim kodom.",
   "branding": "Brendiranje",
   "brandingDesc": "Kreiranje jedinstvenog digitalnog identiteta i prisustva za vaš biznis.",
