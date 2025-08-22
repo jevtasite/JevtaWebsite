@@ -524,7 +524,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const fadeDuration = 600; 
         setTimeout(() => {
           let start = 0;
-          const duration = 650; 
+          const duration = 350; 
           const stepTime = 5;
           const step = (finalValue / (duration / stepTime));
 
