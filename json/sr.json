@@ -1,7 +1,7 @@
 {
   "menuHome": "Početna",
   "menuAbout": "O meni",
-  "menuResume": "Biografija",
+  "menuResume": "Radno Iskustvo",
   "menuPortfolio": "Portfolio",
   "menuServices": "Usluge",
   "menuContact": "Kontakt",
@@ -32,23 +32,25 @@
   "skillsButton1": "Zaposlite me",
   "skillsButton2": "Preuzmi CV",
 
-  "resumeHeading": "Biografija",
+  "resumeHeading": "Radno Iskustvo",
   "resumeCredentials": "Više mojih akreditiva",
   "resumeWork": "Radno iskustvo",
   "internship": "Praksa",
   "internshipText1": "Učenje i rad na tehnologijama (Bootstrap, AJAX, JSON, jQuery), rešavanje konkretnih taskova za klijenta (rad sa API), rešavanje front-end taskova za klijenta (Bootstrap taskovi).",
   "internshipDate": "Maj 2023. - Jun 2023.",
+  "freelance": "Frilens",
+  "freelanceDate": "Od jula 2023.",
   "certificate": "Sertifikat",
 
   "portfolioHeading": "Portfolio",
   "portfolioText": "Neki od mojih nedavnih radova",
 
-  "projectText1": "Moj prvi veb sajt",
+  "projectText1": "Agencija Za Društvene Mreže",
   "projectText2": "Veb programiranje",
   "projectText3": "Konventor valuta",
   "projectText4": "Veb programiranje",
 
-  "projectPopup1": "Prvi statični sajt koji sam napravio.",
+  "projectPopup1": "Agencija za društvene mreže",
   "projectPopup2": "Sajt koji sam uradio za IT kompaniju",
   "projectPopup3": "Integrisanje gotovih elemenata na moj veb sajt.",
   "projectPopup4": "Moje prvo iskustvo sa API-evima, jednostavan konventor valuta.",

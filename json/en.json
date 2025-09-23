@@ -1,7 +1,7 @@
 {
   "menuHome": "Home",
   "menuAbout": "About",
-  "menuResume": "Resume",
+  "menuResume": "Work Experience",
   "menuPortfolio": "Portfolio",
   "menuServices": "Services",
   "menuContact": "Contact",
@@ -37,19 +37,21 @@
   "resumeCredentials": "More of my credentials",
   "resumeWork": "Work Experience",
   "internship": "Internship",
-  "internshipText1": "Learning and working on technologies (Bootstrap, AJAX, JSON, jQuery), solving specific tasks for client (working with API), solving front-end tasks for client (Bootstrap tasks).", 
+  "internshipText1": "Learning and working on technologies (Bootstrap, AJAX, JSON, jQuery), solving specific tasks for client (working with API), solving front-end tasks for client (Bootstrap tasks).",
   "internshipDate": "May 2023 - June 2023",
+  "freelance": "Freelance",
+  "freelanceDate": "Since July of 2023",
   "certificate": "Certificate",
 
   "portfolioHeading": "Portfolio",
   "portfolioText": "Some of my recent works",
 
-  "projectText1": "My first website",
+  "projectText1": "Social Media Agency",
   "projectText2": "Web development",
   "projectText3": "Currency Exchange",
   "projectText4": "Web development",
-  
-  "projectPopup1": "First static website that I developed.",
+
+  "projectPopup1": "Social Media Agency",
   "projectPopup2": "Website I did for an IT company.",
   "projectPopup3": "Integrating already-done elements to my website.",
   "projectPopup4": "My first foray into APIs - a simple currency exchange calculator.",

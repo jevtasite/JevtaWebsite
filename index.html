@@ -1,191 +1,270 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-
-   <!--- basic page needs
+<!--[if IE 8]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+  <head>
+    <!--- basic page needs
    ================================================== -->
-   <meta charset="utf-8">
-	<title>Jevta</title>
-	<meta name="description" content="">  
-	<meta name="author" content="">
+    <meta charset="utf-8" />
+    <title>Jevta</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-   <!-- mobile specific metas
+    <!-- mobile specific metas
    ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
 
- 	<!-- CSS
+    <!-- CSS
    ================================================== -->
-   <link rel="stylesheet" href="css/base.css">  
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">     
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/vendor.css" />
 
-   <!-- script
-   ================================================== -->   
-	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
+    <!-- script
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
 
-   <!-- favicons
+    <!-- favicons
 	================================================== -->
-	<link rel="icon" type="image/icon" href="favicon.ico">
+    <link rel="icon" type="image/icon" href="favicon.ico" />
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
 
-	<!-- fonts
-	================================================== -->	
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&display=swap&subset=latin" rel="stylesheet">
+    <!-- fonts
+	================================================== -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&display=swap&subset=latin"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body id="top">
-
-	<!-- header 
+  <body id="top">
+    <!-- header 
    ================================================== -->
-   <header>   	
-   	<div class="row">
+    <header>
+      <div class="row">
+        <div class="top-bar">
+          <a class="menu-toggle" href="#"><span>Menu</span></a>
 
-   		<div class="top-bar">
-   			<a class="menu-toggle" href="#"><span>Menu</span></a>
+          <div class="logo">
+            <a href="index.html">JEVTA</a>
+          </div>
 
-	   		<div class="logo">
-		         <a href="index.html">JEVTA</a>
-		      </div>		      
+          <nav id="main-nav-wrap">
+            <ul class="main-navigation">
+              <li class="current">
+                <a
+                  class="smoothscroll"
+                  href="#intro"
+                  data-translate="menuHome"
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="smoothscroll"
+                  href="#about"
+                  data-translate="menuAbout"
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="smoothscroll"
+                  href="#resume"
+                  data-translate="menuResume"
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="smoothscroll"
+                  href="#portfolio"
+                  data-translate="menuPortfolio"
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="smoothscroll"
+                  href="#services"
+                  data-translate="menuServices"
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="smoothscroll"
+                  href="#contact"
+                  data-translate="menuContact"
+                ></a>
+              </li>
+              <!--<li><a href="styles.html" title="">Style Demo</a></li>-->
+            </ul>
+          </nav>
+        </div>
+        <!-- /top-bar -->
 
-		   	<nav id="main-nav-wrap">
-					<ul class="main-navigation">
-						<li class="current"><a class="smoothscroll"  href="#intro" data-translate="menuHome"></a></li>
-						<li><a class="smoothscroll"  href="#about" data-translate="menuAbout"></a></li>
-						<li><a class="smoothscroll"  href="#resume" data-translate="menuResume"></a></li>
-						<li><a class="smoothscroll"  href="#portfolio" data-translate="menuPortfolio"></a></li>
-						<li><a class="smoothscroll"  href="#services" data-translate="menuServices"></a></li>					
-						<li><a class="smoothscroll"  href="#contact" data-translate="menuContact"></a></li>	
-						<!--<li><a href="styles.html" title="">Style Demo</a></li>-->				
-					</ul>
-				</nav>    		
-   		</div> <!-- /top-bar --> 
-   		
+        <div class="language">
+          <a href="#" onclick="setLanguage('sr'); return false;" title="Srpski">
+            <img
+              src="images/srbija.svg"
+              alt="Srpski"
+              class="lang-flag"
+              data-lang="sr"
+            />
+          </a>
+          <a
+            href="#"
+            onclick="setLanguage('en'); return false;"
+            title="English"
+          >
+            <img
+              src="images/united-kingdom.svg"
+              alt="English"
+              class="lang-flag"
+              data-lang="en"
+            />
+          </a>
+        </div>
+      </div>
+      <!-- /row -->
+    </header>
+    <!-- /header -->
 
-			<div class="language">
-  <a href="#" onclick="setLanguage('sr'); return false;" title="Srpski">
-    <img src="images/srbija.svg" alt="Srpski" class="lang-flag" data-lang="sr">
-  </a>
-  <a href="#" onclick="setLanguage('en'); return false;" title="English">
-    <img src="images/united-kingdom.svg" alt="English" class="lang-flag" data-lang="en">
-  </a>
-           </div>
-
-
-   	</div> <!-- /row --> 		
-   </header> <!-- /header -->
-
-	<!-- intro section
+    <!-- intro section
    ================================================== -->
-   <section id="intro">   
+    <section id="intro">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="video/waves.mp4" type="video/mp4" />
+      </video>
 
-	<video autoplay muted loop playsinline class="bg-video">
-                   <source src="video/waves.mp4" type="video/mp4">
-                </video>
+      <div class="intro-overlay"></div>
 
-   	<div class="intro-overlay"></div>	
+      <div class="intro-content">
+        <div class="row">
+          <div class="col-twelve">
+            <h5 id="typing-text">Hello, World.</h5>
+            <h1 data-translate="introName">I'm Luka Stoiljković</h1>
 
-   	<div class="intro-content">
-   		<div class="row">
+            <p class="intro-position">
+              <span data-translate="introRole">Front-end Developer</span>
+            </p>
 
-   			<div class="col-twelve">
+            <a
+              class="button stroke smoothscroll"
+              href="#about"
+              title=""
+              data-translate="introButton"
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!-- /intro-content -->
 
-				
+      <ul class="intro-social">
+        <li>
+          <a
+            href="https://www.facebook.com/profile.php?id=61552420501147"
+            target="_blank"
+            ><i class="fa-brands fa-facebook fa-lg"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/luka-stoiljkovi%C4%87-682781297/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin fa-lg"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://github.com/jevtasite" target="_blank"
+            ><i class="fa-brands fa-github fa-lg"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/jevta.site/" target="_blank"
+            ><i class="fa-brands fa-instagram fa-lg"></i
+          ></a>
+        </li>
+      </ul>
+      <!-- /intro-social -->
+    </section>
+    <!-- /intro -->
 
-	   			<h5 id="typing-text">Hello, World.</h5>
-	   			<h1 data-translate="introName">I'm Luka Stoiljković</h1>
-
-	   			<p class="intro-position">
-	   				<span data-translate="introRole">Front-end Developer</span>
-	   			</p>
-
-	   			<a class="button stroke smoothscroll" href="#about" title="" data-translate="introButton"></a>
-
-	   		</div>  
-   			
-   		</div>   		 		
-   	</div> <!-- /intro-content --> 
-
-   	<ul class="intro-social">        
-         <li><a href="https://www.facebook.com/profile.php?id=61552420501147" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
-		 <li><a href="https://www.linkedin.com/in/luka-stoiljkovi%C4%87-682781297/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
-		 <li><a href="https://github.com/jevtasite" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a></li>
-         <li><a href="https://www.instagram.com/jevta.site/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
-      </ul> <!-- /intro-social -->      	
-
-   </section> <!-- /intro -->
-
-
-   <!-- about section
+    <!-- about section
    ================================================== -->
-   <section id="about" class="white-section">  
+    <section id="about" class="white-section">
+      <div class="fade-in-content">
+        <div class="row section-intro">
+          <div class="col-twelve">
+            <h5 data-translate="menuAbout"></h5>
+            <h1 data-translate="aboutHeading"></h1>
 
-	<div class="fade-in-content">
+            <div class="intro-info">
+              <img src="images/profile-pic.png" alt="Profile Picture" />
 
-   	<div class="row section-intro">
-   		<div class="col-twelve">
+              <p class="lead" data-translate="aboutText1"></p>
+            </div>
+          </div>
+        </div>
+        <!-- /section-intro -->
 
-   			<h5 data-translate="menuAbout"></h5>
-   			<h1 data-translate="aboutHeading"></h1>
+        <div class="row about-content">
+          <div class="col-six tab-full">
+            <h3 data-translate="profileHeading"></h3>
+            <p data-translate="profileText"></p>
 
-   			<div class="intro-info">
+            <ul class="info-list info-list-animate">
+              <li>
+                <strong data-translate="fullname"></strong>
+                <span>Luka Stoiljković</span>
+              </li>
+              <li>
+                <strong data-translate="birthDate"></strong>
+                <span data-translate="birthDay"></span>
+              </li>
+              <li>
+                <strong data-translate="job"></strong>
+                <span data-translate="jobDesc"></span>
+              </li>
+              <li>
+                <strong data-translate="website"></strong>
+                <span>jevta.site</span>
+              </li>
+              <li>
+                <strong data-translate="email"></strong>
+                <span>jevta.site@gmail.com</span>
+              </li>
+            </ul>
+            <!-- /info-list -->
+          </div>
 
-   				<img src="images/profile-pic.png" alt="Profile Picture">
+          <div class="col-six tab-full">
+            <h3 data-translate="skills">Skills</h3>
+            <p>
+              <strong class="skillsanimation">HTML/CSS: </strong
+              ><span data-translate="skillsText1"></span><br />
+              <br />
+              <strong class="skillsanimation">Bootstrap: </strong
+              ><span data-translate="skillsText2"></span><br />
+              <br />
+              <strong class="skillsanimation">JavaScript: </strong
+              ><span data-translate="skillsText3"></span><br />
+              <br />
+              <strong class="skillsanimation">jQuery: </strong
+              ><span data-translate="skillsText4"></span><br />
+              <br />
+              <strong class="skillsanimation">AJAX/JSON: </strong
+              ><span data-translate="skillsText5"></span>
+            </p>
 
-   				<p class="lead" data-translate="aboutText1"></p>
-   			</div>   			
-
-   		</div>   		
-   	</div> <!-- /section-intro -->
-
-   	<div class="row about-content">
-
-   		<div class="col-six tab-full">
-
-   			<h3 data-translate="profileHeading"></h3>
-   			<p data-translate="profileText"></p>
-
-   			<ul class="info-list info-list-animate">
-   				<li>
-   					<strong data-translate="fullname"></strong>
-   					<span>Luka Stoiljković</span>
-   				</li>
-   				<li>
-   					<strong data-translate="birthDate"></strong>
-   					<span data-translate="birthDay"></span>
-   				</li>
-   				<li>
-   					<strong data-translate="job"></strong>
-   					<span data-translate="jobDesc"></span>
-   				</li>
-   				<li>
-   					<strong data-translate="website"></strong>
-   					<span>jevta.site</span>
-   				</li>
-   				<li>
-   					<strong data-translate="email"></strong>
-   					<span>jevta.site@gmail.com</span>
-   				</li>
-
-   			</ul> <!-- /info-list -->
-
-   		</div>
-
-   		<div class="col-six tab-full">
-
-   			<h3 data-translate="skills">Skills</h3>
-   			<p> <strong class="skillsanimation">HTML/CSS: </strong><span data-translate="skillsText1"></span><br> <br>
-				<strong class="skillsanimation">Bootstrap: </strong><span data-translate="skillsText2"></span><br> <br>
-				<strong class="skillsanimation">JavaScript: </strong><span data-translate="skillsText3"></span><br> <br>
-				<strong class="skillsanimation">jQuery: </strong><span data-translate="skillsText4"></span><br> <br>
-				<strong class="skillsanimation">AJAX/JSON: </strong><span data-translate="skillsText5"></span></p>
-
-				<!-- <ul class="skill-bars"> -->
-				   <!-- <li>
+            <!-- <ul class="skill-bars"> -->
+            <!-- <li>
 				   	<div class="progress percent90"><span>90%</span></div>
 				   	<strong>HTML5</strong>
 				   </li>
@@ -197,7 +276,7 @@
 				   	<div class="progress percent45"><span>45%</span></div>
 				   	<strong>Javascript</strong>
 				   </li> -->
-				   <!--<li>
+            <!--<li>
 				   	<div class="progress percent95"><span>95%</span></div>
 				   	<strong>PHP</strong>
 				   </li>
@@ -206,97 +285,106 @@
 				   	<div class="progress percent75"><span>75%</span></div>
 				   	<strong>Wordpress</strong>
 				   </li>-->
-      
-				<!-- </ul> -->
 
-   		</div>
+            <!-- </ul> -->
+          </div>
+        </div>
 
-   	</div>
+        <div class="row button-section">
+          <div class="col-twelve">
+            <a
+              href="#contact"
+              title="Hire Me"
+              class="button stroke smoothscroll fade-left"
+              data-translate="skillsButton1"
+            ></a>
+            <a
+              href="index.html"
+              target="_blank"
+              title="Download CV"
+              class="button button-primary fade-left"
+              data-translate="skillsButton2"
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /process-->
 
-   	<div class="row button-section">
-   		<div class="col-twelve">
-   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll fade-left" data-translate="skillsButton1"></a>
-   			<a href="https://drive.google.com/file/d/1Z66kM1UfiwYEwjTgSoE44BLFR-PIIItg/view?usp=sharing" target="_blank" title="Download CV" class="button button-primary fade-left" data-translate="skillsButton2"></a>
-   		</div>   		
-   	</div>
-
-	</div>
-
-   </section> <!-- /process-->    
-
-
-   <!-- resume Section
+    <!-- resume Section
    ================================================== -->
-	<section id="resume" class="grey-section">
-
-		<div class="fade-in-content">
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<!--<h5 data-translate="resumeHeading"></h5>
+    <section id="resume" class="grey-section">
+      <div class="fade-in-content">
+        <div class="row section-intro">
+          <div class="col-twelve">
+            <!--<h5 data-translate="resumeHeading"></h5>
    			<h1 data-translate="resumeCredentials"></h1>-->
 
-   			<!-- <p class="lead">Here’s a quick look at my experience, skills, and projects so far.</p> -->
+            <!-- <p class="lead">Here’s a quick look at my experience, skills, and projects so far.</p> -->
+          </div>
+        </div>
+        <!-- /section-intro-->
 
-   		</div>   		
-   	</div> <!-- /section-intro--> 
+        <div class="row resume-timeline">
+          <div class="col-twelve resume-header">
+            <h2 data-translate="resumeWork"></h2>
+            <br />
+            <!-- <h3>Currently looking for a job!</h3> -->
+          </div>
 
-   	<div class="row resume-timeline">
+          <div class="col-twelve">
+            <div class="timeline-wrap">
+              <div class="timeline-block">
+                <div class="timeline-ico">
+                  <i class="fa fa-graduation-cap"></i>
+                </div>
 
-   		<div class="col-twelve resume-header">
+                <div class="timeline-header">
+                  <h3 data-translate="internship"></h3>
+                  <p data-translate="internshipDate"></p>
+                </div>
 
-   			<h2 data-translate="resumeWork"></h2><br>
-			<!-- <h3>Currently looking for a job!</h3> -->
+                <div class="timeline-content">
+                  <h4>
+                    <a href="https://esenca.rs/" target="_blank"
+                      >Esenca Software</a
+                    >
+                  </h4>
+                  <p id="presume" data-translate="internshipText1"></p>
+                  <h3 style="font-size: 1.75rem">
+                    <a
+                      href="https://drive.google.com/file/d/1RocFTef7IS-BZRohnQbvb3gdcyd_cYWx/view?usp=sharing"
+                      title="Certificate"
+                      target="_blank"
+                      data-translate="certificate"
+                    ></a>
+                  </h3>
+                </div>
+              </div>
 
+              <div class="timeline-block">
+                <div class="timeline-ico">
+                  <i class="fa fa-graduation-cap"></i>
+                </div>
 
-   		</div> 
+                <div class="timeline-header">
+                  <h3 data-translate="freelance"></h3>
+                  <p data-translate="freelanceDate"></p>
+                </div>
 
-   		<div class="col-twelve">
+                <!-- <div class="timeline-content">
+                  <h4>Super Cool Agency</h4>
+                  <p>
+                    Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in
+                    magna consectetur nisi cupidatat laboris esse eiusmod
+                    deserunt aute do quis velit esse sed Ut proident cupidatat
+                    nulla esse cillum laborum occaecat nostrud sit dolor
+                    incididunt amet est occaecat nisi incididunt.
+                  </p>
+                </div>-->
+              </div>
 
-   			<div class="timeline-wrap">
-
-   				<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3 data-translate="internship"></h3>
-	   					<p data-translate="internshipDate"></p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>
-							<a href="https://esenca.rs/" target="_blank">Esenca Software</a>
-						</h4>
-	   					<p id="presume" data-translate="internshipText1"></p>
-						   <h3 style="font-size: 1.75rem;"><a href="https://drive.google.com/file/d/1RocFTef7IS-BZRohnQbvb3gdcyd_cYWx/view?usp=sharing" title="Certificate" target="_blank" data-translate="certificate"></a></h3>
-	   				</div>
-
-	   			</div> 
-				
-
-	   			<!--<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Front-end Developer</h3>
-	   					<p>July 2014 - June 2015</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Super Cool Agency</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
-	   				</div>
-
-	   			</div> 
-
-	   			<div class="timeline-block">
+              <!--	<div class="timeline-block">
 
 	   				<div class="timeline-ico">
 	   					<i class="fa fa-graduation-cap"></i>
@@ -312,27 +400,18 @@
 	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
 	   				</div>
 
-	   			</div>--> 
+	   			</div>-->
+            </div>
+          </div>
+        </div>
 
-   			</div>   			
+        <div class="row resume-timeline">
+          <div class="col-twelve resume-header">
+            <!--<h2>Education</h2>-->
+          </div>
 
-   		</div> 
-   		
-		
-
-   	</div>
-   	
-   	<div class="row resume-timeline">
-
-   		<div class="col-twelve resume-header">
-
-   			<!--<h2>Education</h2>-->
-
-   		</div> 
-
-   		<div class="col-twelve">
-
-   			<!--<div class="timeline-wrap">
+          <div class="col-twelve">
+            <!--<div class="timeline-wrap">
 
    				<div class="timeline-block">
 
@@ -388,72 +467,69 @@
 
 	   			</div> 
 
-   			</div>--> 		
+   			</div>-->
+          </div>
+        </div>
+      </div>
+    </section>
 
-   		</div> 
-   		
-   	</div> 
-	
-  </div>
-	
-	</section> 
-
-
-	<!-- Portfolio Section
+    <!-- Portfolio Section
    ================================================== -->
-	<section id="portfolio" class="white-section">
+    <section id="portfolio" class="white-section">
+      <div class="fade-in-content">
+        <div class="row section-intro">
+          <div class="col-twelve">
+            <h5 data-translate="portfolioHeading"></h5>
+            <h1 data-translate="portfolioText"></h1>
 
-		<div class="fade-in-content">
+            <!-- <p class="lead">Explore a selection of my projects to get a glimpse of the creative and technical expertise I bring to the table.</p> -->
+          </div>
+        </div>
+        <!-- /section-intro-->
 
-		<div class="row section-intro">
-   		<div class="col-twelve">
+        <div class="row portfolio-content">
+          <div class="col-twelve">
+            <!-- portfolio-wrapper -->
+            <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+              <div class="bgrid folio-item">
+                <div class="item-wrap">
+                  <img
+                    src="images/portfolio/field-focus.png"
+                    alt="Vegetables"
+                  />
+                  <a href="#modal-01" class="overlay">
+                    <div class="folio-item-table">
+                      <div class="folio-item-cell">
+                        <h3 class="folio-title">Field Focus</h3>
+                        <span class="folio-types" data-translate="projectText1">
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- /folio-item -->
 
-   			<h5 data-translate="portfolioHeading"></h5>
-   			<h1 data-translate="portfolioText"></h1>
+              <div class="bgrid folio-item">
+                <div class="item-wrap">
+                  <img
+                    src="images/portfolio/Jevta-Esenca.png"
+                    alt="Esenca Software"
+                  />
+                  <a href="#modal-02" class="overlay">
+                    <div class="folio-item-table">
+                      <div class="folio-item-cell">
+                        <h3 class="folio-title">Esenca Software</h3>
+                        <span class="folio-types" data-translate="projectText2">
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- /folio-item -->
 
-   			<!-- <p class="lead">Explore a selection of my projects to get a glimpse of the creative and technical expertise I bring to the table.</p> -->
-
-   		</div>   		
-   	</div> <!-- /section-intro--> 
-
-   	<div class="row portfolio-content">
-
-   		<div class="col-twelve">
-
-   			<!-- portfolio-wrapper -->
-	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
-
-	         	<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/Jevta-Povrce.PNG" alt="Vegetables">
-	                  <a href="#modal-01" class="overlay">	                  	           
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-		     					       <h3 class="folio-title">Jevta Vegetables</h3>	     					    
-		     					    	 <span class="folio-types" data-translate="projectText1">
-		     					       </span>
-		     					   </div>	                      	
-	                     </div>                    
-	                  </a>
-	               </div>	               
-	        		</div> <!-- /folio-item -->
-
-	        		<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/Jevta-Esenca.png" alt="Esenca Software">
-	               	<a href="#modal-02" class="overlay">              		                  
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Esenca Software</h3>	     					    
-		     					    	<span class="folio-types" data-translate="projectText2">
-		     					      </span>		     		
-		     					   </div> 	                      	
-	                     </div>                    
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->
-
-	            	<div class="bgrid folio-item">
+              <!--   	<div class="bgrid folio-item">
 						<div class="item-wrap">
 							<img src="images/portfolio/Jevta-CEC.png" alt="Calculator">
 							<a href="#modal-06" class="overlay">              		                  
@@ -465,10 +541,11 @@
 										 </div> 	                      	
 							  </div>                    
 						   </a>
-						</div>
-						 </div> <!-- /folio-item -->
+						</div> 
+						 </div> -->
+              <!-- /folio-item -->
 
-	            <!-- <div class="bgrid folio-item">
+              <!-- <div class="bgrid folio-item">
 	               <div class="item-wrap">
 	               	<img src="images/portfolio/beetle.jpg" alt="Beetle">
 	                  <a href="#modal-04" class="overlay">                  	                 
@@ -484,7 +561,7 @@
 	               </div>
 	        		</div> /folio-item      -->
 
-	        		<!-- <div class="bgrid folio-item">
+              <!-- <div class="bgrid folio-item">
 	               <div class="item-wrap">
 	               	<img src="images/portfolio/lighthouse.jpg" alt="Lighthouse">
 	                  <a href="#modal-05" class="overlay">             		                  
@@ -500,7 +577,7 @@
 	               </div>
 	        		</div> /folio-item -->
 
-						 <div class="bgrid folio-item">
+              <!--	 <div class="bgrid folio-item">
 							<div class="item-wrap">
 								<img src="images/portfolio/Jevta-PearShop.png" alt="Shop">
 							   <a href="#modal-03" class="overlay">             		                  
@@ -513,71 +590,102 @@
 								  </div>                    
 							   </a>
 							</div>
-							 </div> <!-- /folio-item -->   
+							 </div> -->
+              <!-- /folio-item -->
 
-	            <!-- modal popups - begin
+              <!-- modal popups - begin
 	            ============================================================= -->
-	            <div id="modal-01" class="popup-modal slider mfp-hide">	
+              <div id="modal-01" class="popup-modal slider mfp-hide">
+                <div class="media">
+                  <img
+                    src="images/portfolio/modals/m-fieldfocus.png"
+                    alt="Field Focus"
+                  />
+                </div>
 
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-jevta-povrce.jpg" alt="Jevta-Povrce" />
-				     	</div>      	
+                <div class="description-box">
+                  <h4>Field Focus</h4>
+                  <p data-translate="projectPopup1"></p>
 
-					   <div class="description-box">
-					      <h4>Jevta Vegetables</h4>		      
-					      <p data-translate="projectPopup1"></p>
+                  <div class="categories" data-translate="projectText2"></div>
+                </div>
 
-					      <div class="categories" data-translate="projectText2"></div>			               
-					   </div>
+                <div class="link-box">
+                  <a
+                    href="https://fieldfocus.agency/"
+                    target="_blank"
+                    data-translate="projectButton1"
+                  ></a>
+                  <a
+                    href="#"
+                    class="popup-modal-dismiss"
+                    data-translate="projectButton2"
+                  ></a>
+                </div>
+              </div>
+              <!-- /modal-01 -->
 
-			         <div class="link-box">
-			            <a href="https://jevtasite.github.io/JevtaVegetable/index.html" target="_blank" data-translate="projectButton1"></a>
-					      <a href="#" class="popup-modal-dismiss" data-translate="projectButton2"></a>
-			         </div>		      
+              <div id="modal-02" class="popup-modal slider mfp-hide">
+                <div class="media">
+                  <img
+                    src="images/portfolio/modals/m-esenca.png"
+                    alt="Esenca"
+                  />
+                </div>
 
-				   </div> <!-- /modal-01 -->
+                <div class="description-box">
+                  <h4>Esenca Software</h4>
+                  <p data-translate="projectPopup2"></p>
 
-				   <div id="modal-02" class="popup-modal slider mfp-hide">	
+                  <div class="categories" data-translate="projectText2"></div>
+                </div>
 
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-esenca.png" alt="Esenca" />
-				     	</div>      	
+                <div class="link-box">
+                  <a
+                    href="https://jevtasite.github.io/Jevta-Esenca/"
+                    target="_blank"
+                    data-translate="projectButton1"
+                  ></a>
+                  <a
+                    href="#"
+                    class="popup-modal-dismiss"
+                    data-translate="projectButton2"
+                  ></a>
+                </div>
+              </div>
+              <!-- /modal-02 -->
 
-					   <div class="description-box">
-					      <h4>Esenca Software</h4>		      
-					      <p data-translate="projectPopup2"></p>
+              <div id="modal-03" class="popup-modal slider mfp-hide">
+                <div class="media">
+                  <img
+                    src="images/portfolio/modals/m-pearshop.png"
+                    alt="PearShop"
+                  />
+                </div>
 
-					      <div class="categories" data-translate="projectText2"></div>			               
-					   </div>
+                <div class="description-box">
+                  <h4>PearShop</h4>
+                  <p data-translate="projectPopup3"></p>
 
-			         <div class="link-box">
-			            <a href="https://jevtasite.github.io/Jevta-Esenca/" target="_blank" data-translate="projectButton1"></a>
-					      <a href="#" class="popup-modal-dismiss" data-translate="projectButton2"></a>
-			         </div>		      
+                  <div class="categories" data-translate="projectText2"></div>
+                </div>
 
-				   </div> <!-- /modal-02 -->
+                <div class="link-box">
+                  <a
+                    href="https://jevtasite.github.io/Jevta-PearShop/"
+                    target="_blank"
+                    data-translate="projectButton1"
+                  ></a>
+                  <a
+                    href="#"
+                    class="popup-modal-dismiss"
+                    data-translate="projectButton2"
+                  ></a>
+                </div>
+              </div>
+              <!-- /modal-03 -->
 
-				   <div id="modal-03" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-pearshop.png" alt="PearShop" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>PearShop</h4>		      
-					      <p data-translate="projectPopup3"></p>
-
-					      <div class="categories" data-translate="projectText2"></div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="https://jevtasite.github.io/Jevta-PearShop/" target="_blank" data-translate="projectButton1"></a>
-					      <a href="#" class="popup-modal-dismiss" data-translate="projectButton2"></a>
-			         </div>		      
-
-				   </div> <!-- /modal-03 -->
-
-				   <!-- <div id="modal-04" class="popup-modal slider mfp-hide">	
+              <!-- <div id="modal-04" class="popup-modal slider mfp-hide">	
 
 				     	<div class="media">
 				     		<img src="images/portfolio/modals/m-beetle.jpg" alt="" />
@@ -597,7 +705,7 @@
 
 				   </div> /modal-04 -->
 
-				   <!-- <div id="modal-05" class="popup-modal slider mfp-hide">	
+              <!-- <div id="modal-05" class="popup-modal slider mfp-hide">	
 
 				     	<div class="media">
 				     		<img src="images/portfolio/modals/m-lighthouse.jpg" alt="" />
@@ -617,44 +725,51 @@
 
 				   </div> /modal-05 -->
 
-				   <div id="modal-06" class="popup-modal slider mfp-hide">	
+              <div id="modal-06" class="popup-modal slider mfp-hide">
+                <div class="media">
+                  <img
+                    src="images/portfolio/modals/m-jevta-cec.png"
+                    alt="Currency"
+                  />
+                </div>
 
-					<div class="media">
-						<img src="images/portfolio/modals/m-jevta-cec.png" alt="Currency" />
-					</div>      	
+                <div class="description-box">
+                  <h4>Currency Exchange Calculator</h4>
+                  <p data-translate="projectPopup4"></p>
 
-				  <div class="description-box">
-					 <h4>Currency Exchange Calculator</h4>		      
-					 <p data-translate="projectPopup4"></p>
+                  <div class="categories" data-translate="projectText2"></div>
+                </div>
 
-					 <div class="categories" data-translate="projectText2"></div>			               
-				  </div>
+                <div class="link-box">
+                  <a
+                    href="https://jevtasite.github.io/JevtaCEC/index.html"
+                    target="_blank"
+                    data-translate="projectButton1"
+                  ></a>
+                  <a
+                    href="#"
+                    class="popup-modal-dismiss"
+                    data-translate="projectButton1"
+                  ></a>
+                </div>
+              </div>
+              <!-- /modal-06 -->
 
-				<div class="link-box">
-				   <a href="https://jevtasite.github.io/JevtaCEC/index.html" target="_blank" data-translate="projectButton1"></a>
-					 <a href="#" class="popup-modal-dismiss" data-translate="projectButton1"></a>
-				</div>		  		      
-
-				   </div> <!-- /modal-06 -->
-
-
-				   <!-- modal popups - end
+              <!-- modal popups - end
 	            ============================================================= -->
+            </div>
+            <!-- /portfolio-wrapper -->
+          </div>
+          <!-- /twelve -->
+        </div>
+        <!-- /portfolio-content -->
+      </div>
+    </section>
+    <!-- /portfolio -->
 
-	         </div> <!-- /portfolio-wrapper --> 
-
-   		</div>  <!-- /twelve -->   
-
-   	</div> <!-- /portfolio-content --> 
-	
-	</div>
-
-	</section> <!-- /portfolio --> 
-
-
-	<!-- CTA Section
+    <!-- CTA Section
    ================================================== -->
-	<!--<section id="cta" class="grey-section">
+    <!--<section id="cta" class="grey-section">
 
    	<div class="row cta-content">
 
@@ -676,31 +791,27 @@
 
    	</div> 
 
-   </section>--> <!-- /cta --> 
+   </section>-->
+    <!-- /cta -->
 
-	
-	<!-- services Section
+    <!-- services Section
    ================================================== -->
-	<section id="services" class="fade-in">
+    <section id="services" class="fade-in">
+      <div class="overlay"></div>
 
-		<div class="overlay"></div>
+      <div class="row section-intro">
+        <div class="col-twelve">
+          <h5 data-translate="services"></h5>
+          <h1 data-translate="servicesHeading"></h1>
 
-		<div class="row section-intro">
-   		<div class="col-twelve">
+          <!--<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>-->
+        </div>
+      </div>
+      <!-- /section-intro -->
 
-   			<h5 data-translate="services"></h5>
-   			<h1 data-translate="servicesHeading"></h1>
-
-   			<!--<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>-->
-
-   		</div>   		
-   	</div> <!-- /section-intro -->
-
-   	<div class="row services-content">
-
-   		<div id="owl-slider" class="owl-carousel services-list">
-
-	      	<!--<div class="service">	
+      <div class="row services-content">
+        <div id="owl-slider" class="owl-carousel services-list">
+          <!--<div class="service">	
 
 	      		<span class="icon"><i class="icon-earth"></i></span>            
 
@@ -715,37 +826,29 @@
 
 				</div>-->
 
-				<div class="service">	
+          <div class="service">
+            <span class="icon"><i class="icon-window"></i></span>
 
-					<span class="icon"><i class="icon-window"></i></span>                          
+            <div class="service-content">
+              <h3 data-translate="webDevelopment"></h3>
 
-	            <div class="service-content">	
+              <p class="desc" data-translate="webDevelopmentDesc"></p>
+            </div>
+          </div>
+          <!-- /service -->
 
-	            	<h3 data-translate="webDevelopment"></h3>  
+          <div class="service">
+            <span class="icon"><i class="icon-paint-brush"></i></span>
 
-		            <p class="desc" data-translate="webDevelopmentDesc"> 
-	         		</p>
+            <div class="service-content">
+              <h3 data-translate="branding"></h3>
 
-	            </div>	                          
+              <p class="desc" data-translate="brandingDesc"></p>
+            </div>
+          </div>
+          <!-- /service -->
 
-			   </div> <!-- /service -->
-
-			   <div class="service">
-
-			   	<span class="icon"><i class="icon-paint-brush"></i></span>		            
-
-	            <div class="service-content">
-
-	            	<h3 data-translate="branding"></h3>
-
-		            <p class="desc" data-translate="brandingDesc">
-	        			</p> 
-
-	            </div> 	            	               
-
-			   </div> <!-- /service -->
-
-				<!--<div class="service">
+          <!--<div class="service">
 
 					<span class="icon"><i class="icon-toggles"></i></span>	              
 
@@ -758,9 +861,10 @@
 	         		
 	            </div>                
 
-				</div>--> <!-- /service -->
+				</div>-->
+          <!-- /service -->
 
-			   <!--<div class="service">
+          <!--<div class="service">
 
 			   	<span class="icon"><i class="icon-image"></i></span>	            
 
@@ -773,100 +877,79 @@
 
 	            </div>	               
 
-			   </div>--> <!-- /service -->
+			   </div>-->
+          <!-- /service -->
 
-			   <div class="service">
+          <div class="service">
+            <span class="icon"><i class="icon-chat"></i></span>
 
-			   	<span class="icon"><i class="icon-chat"></i></span>	   	           
+            <div class="service-content">
+              <h3 data-translate="consultancy"></h3>
 
-	            <div class="service-content">
+              <p class="desc" data-translate="consultancyDesc"></p>
+            </div>
+          </div>
+          <!-- /service -->
+        </div>
+        <!-- /services-list -->
+      </div>
+      <!-- /services-content -->
+    </section>
+    <!-- /services -->
 
-	            	 <h3 data-translate="consultancy"></h3>
-
-		            <p class="desc" data-translate="consultancyDesc">
-	        			</p> 
-	        			
-	            </div>	               
-
-			   </div> <!-- /service -->
-
-	      </div> <!-- /services-list -->
-   		
-   	</div> <!-- /services-content -->
-		
-	</section> <!-- /services -->	
-
-
-	<!-- stats Section
+    <!-- stats Section
    ================================================== -->
-	<section id="stats" class="count-up">
+    <section id="stats" class="count-up">
+      <div class="row">
+        <div class="col-twelve">
+          <div
+            class="block-1-4 block-s-1-4 block-tab-1-2 block-mob-full stats-list"
+          >
+            <div class="bgrid stat">
+              <div class="icon-part">
+                <i class="fa-solid fa-calendar-days"></i>
+              </div>
 
-		<div class="row">
-			<div class="col-twelve">
+              <h3 class="stat-count">2</h3>
 
-				<div class="block-1-4 block-s-1-4 block-tab-1-2 block-mob-full stats-list">
+              <h5 class="stat-title" data-translate="counter1"></h5>
+            </div>
+            <!-- /stat -->
 
-					<div class="bgrid stat">
+            <div class="bgrid stat">
+              <div class="icon-part">
+                <i class="fa-solid fa-users"></i>
+              </div>
 
-						<div class="icon-part">
-							<i class="fa-solid fa-calendar-days"></i>
-						</div>
+              <h3 class="stat-count">3</h3>
 
-						<h3 class="stat-count">
-							2
-						</h3>
+              <h5 class="stat-title" data-translate="counter2"></h5>
+            </div>
+            <!-- /stat -->
 
-						<h5 class="stat-title" data-translate="counter1">
-						</h5>
+            <div class="bgrid stat">
+              <div class="icon-part">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
 
-					</div> <!-- /stat -->					
+              <h3 class="stat-count">8</h3>
 
-					<div class="bgrid stat">
+              <h5 class="stat-title" data-translate="counter3"></h5>
+            </div>
+            <!-- /stat -->
 
-						<div class="icon-part">
-							<i class="fa-solid fa-users"></i>
-						</div>
+            <div class="bgrid stat">
+              <div class="icon-part">
+                <i class="fa-regular fa-clock"></i>
+              </div>
 
-						<h3 class="stat-count">
-							3
-						</h3>
+              <h3 class="stat-count">2400</h3>
 
-						<h5 class="stat-title" data-translate="counter2">
-						</h5>
+              <h5 class="stat-title" data-translate="counter4"></h5>
+            </div>
+            <!-- /stat -->
 
-					</div> <!-- /stat -->
-
-					<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="fa-solid fa-list-check"></i>
-						</div>
-
-						<h3 class="stat-count">
-							8
-						</h3>
-
-						<h5 class="stat-title" data-translate="counter3">
-						</h5>
-
-					</div> <!-- /stat -->									
-
-					<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="fa-regular fa-clock"></i>
-						</div>
-
-						<h3 class="stat-count">
-							2400
-						</h3>
-
-						<h5 class="stat-title" data-translate="counter4">
-						</h5>
-
-					</div> <!-- /stat -->
-
-					<!-- <div class="bgrid stat">
+            <!-- <div class="bgrid stat">
 
 						<div class="icon-part">
 							<i class="icon-cup"></i>
@@ -882,7 +965,7 @@
 
 					</div> /stat -->
 
-					<!-- <div class="bgrid stat">
+            <!-- <div class="bgrid stat">
 
 						<div class="icon-part">
 							<i class="icon-clock"></i>
@@ -897,36 +980,32 @@
 						</h5>
 
 					</div> /stat -->
+          </div>
+          <!-- /stats-list -->
+        </div>
+        <!-- /twelve -->
+      </div>
+      <!-- /row -->
+    </section>
+    <!-- /stats -->
 
-				</div> <!-- /stats-list -->
-
-			</div> <!-- /twelve -->
-		</div> <!-- /row -->
-
-	</section> <!-- /stats -->
-
-	
-   <!-- contact
+    <!-- contact
    ================================================== -->
-	<section id="contact" class="fade-in">
+    <section id="contact" class="fade-in">
+      <div class="row section-intro">
+        <div class="col-twelve">
+          <h5 data-translate="contact"></h5>
+          <h1 data-translate="contactHeading"></h1>
 
-		<div class="row section-intro">
-   		<div class="col-twelve">
+          <p class="lead" data-translate="contactText"></p>
+        </div>
+      </div>
+      <!-- /section-intro -->
 
-   			<h5 data-translate="contact"></h5>
-   			<h1 data-translate="contactHeading"></h1>
-
-   			<p class="lead" data-translate="contactText"></p>
-
-   		</div> 
-   	</div> <!-- /section-intro -->
-
-   	<div class="row contact-form">
-
-   		<div class="col-twelve">
-
-            <!-- form -->
-           <!--<form name="contactForm" id="contactForm" method="post" action="">
+      <div class="row contact-form">
+        <div class="col-twelve">
+          <!-- form -->
+          <!--<form name="contactForm" id="contactForm" method="post" action="">
       			<fieldset>
 
                   <div class="form-field">
@@ -954,23 +1033,22 @@
                   </div>
 
       			</fieldset>
-      		</form>--> <!-- Form End -->
+      		</form>-->
+          <!-- Form End -->
 
-            <!-- contact-warning -->
-            <div id="message-warning">            	
-            </div>            
-            <!-- contact-success -->
-      		<div id="message-success">
-               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-      		</div>
+          <!-- contact-warning -->
+          <div id="message-warning"></div>
+          <!-- contact-success -->
+          <div id="message-success">
+            <i class="fa fa-check"></i>Your message was sent, thank you!<br />
+          </div>
+        </div>
+        <!-- /col-twelve -->
+      </div>
+      <!-- /contact-form -->
 
-         </div> <!-- /col-twelve -->
-   		
-   	</div> <!-- /contact-form -->
-
-   	<div class="row contact-info">
-
-   		<!--<div class="col-two tab-full">
+      <div class="row contact-info">
+        <!--<div class="col-two tab-full">
 
    			<div class="icon">
    				<i class="icon-pin"></i>
@@ -984,79 +1062,91 @@
 
    		</div>-->
 
-   		<div id="razmak" class="col-six tab-full collapse">
+        <div id="razmak" class="col-six tab-full collapse">
+          <div class="icon">
+            <i class="icon-mail"></i>
+          </div>
 
-   			<div class="icon">
-   				<i class="icon-mail"></i>
-   			</div>
+          <h5 data-translate="contactEmail"></h5>
 
-   			<h5 data-translate="contactEmail"></h5>
+          <a id="siva" href="#" onclick="openGmail()" target="_blank"
+            >jevta.site@gmail.com</a
+          >
+        </div>
 
-   			<a id="siva" href="#" onclick="openGmail()" target="_blank">jevta.site@gmail.com</a></li>
+        <div id="razmak" class="col-six tab-full">
+          <div class="icon">
+            <i class="icon-phone"></i>
+          </div>
 
-   		</div>
+          <h5 data-translate="contactPhone"></h5>
 
-   		<div id="razmak" class="col-six tab-full">
+          <p>(+381) 64 494 3411</p>
+        </div>
+      </div>
+      <!-- /contact-info -->
+    </section>
+    <!-- /contact -->
 
-   			<div class="icon">
-   				<i class="icon-phone"></i>
-   			</div>
-
-   			<h5 data-translate="contactPhone"></h5>
-
-   			<p>(+381) 64 494 3411</p>
-
-   		</div>
-   		
-   	</div> <!-- /contact-info -->
-		
-	</section> <!-- /contact -->
-
-
-   <!-- footer
+    <!-- footer
    ================================================== -->
 
-   <footer>
-     	<div class="row">
+    <footer>
+      <div class="row">
+        <div class="col-four tab-full pull-right social">
+          <ul class="footer-social">
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=61552420501147"
+                target="_blank"
+                ><i class="fa-brands fa-facebook fa-lg"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/luka-stoiljkovi%C4%87-682781297/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin fa-lg"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/jevtasite" target="_blank"
+                ><i class="fa-brands fa-github fa-lg"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/jevta.site/" target="_blank"
+                ><i class="fa-brands fa-instagram fa-lg"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
 
-     		<div class="col-four tab-full pull-right social">
+        <div class="col-eight tab-full">
+          <div class="copyright">
+            <span> <span class="shine-logo">Jevta</span>© Copyright 2025 </span>
+          </div>
+        </div>
 
-     			<ul class="footer-social">        
-			      <li><a href="https://www.facebook.com/profile.php?id=61552420501147" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
-				  <li><a href="https://www.linkedin.com/in/luka-stoiljkovi%C4%87-682781297/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
-				  <li><a href="https://github.com/jevtasite" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a></li>
-			      <li><a href="https://www.instagram.com/jevta.site/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
-			   </ul> 
-	      		
-	      </div>
+        <div id="go-top">
+          <a class="smoothscroll" title="Back to Top" href="#top"
+            ><i class="fa fa-long-arrow-up"></i
+          ></a>
+        </div>
+      </div>
+      <!-- /row -->
+    </footer>
 
-      	<div class="col-eight tab-full">
-  <div class="copyright">
-    <span>
-      <span class="shine-logo">Jevta</span>© Copyright 2025
-    </span>
-  </div>
-</div>
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
 
-	      	<div id="go-top">
-		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
-		      </div>
-
-      	</div> <!-- /row -->     	
-   </footer>  
-
-   <div id="preloader"> 
-    	<div id="loader"></div>
-   </div> 
-
-   <!-- Java Script
-   ================================================== --> 
-   <script src="js/jquery-2.1.3.min.js"></script>
-   <script src="js/plugins.js"></script>
-   <script src="js/main.js"></script>
-   <script src="js/index.js"></script>
-   <script src="js/lang.js"></script>
-
-</body>
-
+    <!-- Java Script
+   ================================================== -->
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/lang.js"></script>
+  </body>
 </html>

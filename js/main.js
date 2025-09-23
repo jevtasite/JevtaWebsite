@@ -496,10 +496,10 @@ document.addEventListener("DOMContentLoaded", () => {
             // fade in
             stat.classList.add("animate");
 
-            const fadeDuration = 600;
+            const fadeDuration = 400;
             setTimeout(() => {
               let start = 0;
-              const duration = 550;
+              const duration = 400;
               const stepTime = 5;
               const step = finalValue / (duration / stepTime);
 
