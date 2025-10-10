@@ -47,14 +47,14 @@
   "portfolioText": "Some of my recent works",
 
   "projectText1": "Social Media Agency",
-  "projectText2": "Web development",
-  "projectText3": "Currency Exchange",
-  "projectText4": "Web development",
+  "projectText2": "Social Media Agency",
+  "projectText3": "International Football Agency",
+  "projectText4": "Social Media Agency",
 
-  "projectPopup1": "Social Media Agency",
-  "projectPopup2": "Website I did for an IT company.",
-  "projectPopup3": "Integrating already-done elements to my website.",
-  "projectPopup4": "My first foray into APIs - a simple currency exchange calculator.",
+  "projectPopup1": "Web Development",
+  "projectPopup2": "Web Development",
+  "projectPopup3": "Web Development",
+  "projectPopup4": "Web Development",
 
   "projectButton1": "Visit",
   "projectButton2": "Close",
