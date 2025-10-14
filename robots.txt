@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jevta.site/sitemap.xml
